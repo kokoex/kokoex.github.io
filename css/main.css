@@ -238,7 +238,7 @@ iframe,
 img,
 video {
   display: inline-block;
-  margin: 10 10px;
+  margin: 5px 5px;
   max-width: 100%;
 }
 hr {
