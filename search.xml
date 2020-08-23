@@ -29,9 +29,7 @@
   <entry>
     <title>test01</title>
     <url>/2020/test01/</url>
-    <content><![CDATA[<p>test01</p>
-<p><img data-src="https://hehelab.oss-cn-hangzhou.aliyuncs.com/img/20200824020629.jpg"></p>
-]]></content>
+    <content><![CDATA[<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img data-src="https://hehelab.oss-cn-hangzhou.aliyuncs.com/img/20200823231526.jpg"></div><div class="group-picture-column" style="width: 50%;"><img data-src="https://hehelab.oss-cn-hangzhou.aliyuncs.com/img/20200824020629.jpg"></div></div></div></div>]]></content>
       <categories>
         <category>Photo</category>
       </categories>
@@ -41,7 +39,7 @@
     <url>/2020/pictest/</url>
     <content><![CDATA[<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img data-src="http://upload-images.jianshu.io/upload_images/4555732-aaf54354f5ee9c73.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></div><div class="group-picture-column" style="width: 50%;"><img data-src="http://upload-images.jianshu.io/upload_images/4555732-848f3310dfa553f9.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img data-src="http://upload-images.jianshu.io/upload_images/4555732-0eddf70179c6a70c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img data-src="http://upload-images.jianshu.io/upload_images/4555732-bbacea1efba4d2c7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img data-src="http://upload-images.jianshu.io/upload_images/4555732-a62866ec9652a650.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></div></div></div></div>]]></content>
       <categories>
-        <category>图片</category>
+        <category>Photo</category>
       </categories>
   </entry>
 </search>
