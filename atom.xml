@@ -6,7 +6,7 @@
   <link href="http://hehelab.com/atom.xml" rel="self"/>
   
   <link href="http://hehelab.com/"/>
-  <updated>2020-08-23T22:17:05.000Z</updated>
+  <updated>2020-08-23T20:51:42.000Z</updated>
   <id>http://hehelab.com/</id>
   
   <author>
@@ -15,48 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="http://hehelab.com/2020/pictest/"/>
-    <id>http://hehelab.com/2020/pictest/</id>
-    <published>2020-08-23T21:37:25.000Z</published>
-    <updated>2020-08-23T22:17:05.000Z</updated>
-    
-    <content type="html"><![CDATA[<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img data-src="http://upload-images.jianshu.io/upload_images/4555732-aaf54354f5ee9c73.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></div><div class="group-picture-column" style="width: 50%;"><img data-src="http://upload-images.jianshu.io/upload_images/4555732-848f3310dfa553f9.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img data-src="http://upload-images.jianshu.io/upload_images/4555732-0eddf70179c6a70c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img data-src="http://upload-images.jianshu.io/upload_images/4555732-bbacea1efba4d2c7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img data-src="http://upload-images.jianshu.io/upload_images/4555732-a62866ec9652a650.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></div></div></div></div>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;div class=&quot;group-picture&quot;&gt;&lt;div class=&quot;group-picture-container&quot;&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;div class=&quot;group-picture-column&quot; style=&quot;widt</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>test01</title>
-    <link href="http://hehelab.com/2020/test01/"/>
-    <id>http://hehelab.com/2020/test01/</id>
-    <published>2020-08-23T20:50:22.000Z</published>
-    <updated>2020-08-23T22:12:57.000Z</updated>
-    
-    <content type="html"><![CDATA[<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img data-src="https://hehelab.oss-cn-hangzhou.aliyuncs.com/img/20200823231526.jpg"></div><div class="group-picture-column" style="width: 50%;"><img data-src="https://hehelab.oss-cn-hangzhou.aliyuncs.com/img/20200824020629.jpg"></div></div></div></div>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;div class=&quot;group-picture&quot;&gt;&lt;div class=&quot;group-picture-container&quot;&gt;&lt;div class=&quot;group-picture-row&quot;&gt;&lt;div class=&quot;group-picture-column&quot; style=&quot;widt</summary>
-      
-    
-    
-    
-    <category term="Photo" scheme="http://hehelab.com/cat/photo/"/>
-    
-    
-  </entry>
   
   <entry>
     <title>name</title>
