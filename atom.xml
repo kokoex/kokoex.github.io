@@ -6,7 +6,7 @@
   <link href="http://hehelab.com/atom.xml" rel="self"/>
   
   <link href="http://hehelab.com/"/>
-  <updated>2020-08-23T20:51:42.000Z</updated>
+  <updated>2020-09-13T17:22:11.000Z</updated>
   <id>http://hehelab.com/</id>
   
   <author>
@@ -17,33 +17,213 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>name</title>
-    <link href="http://hehelab.com/2020/name/"/>
-    <id>http://hehelab.com/2020/name/</id>
-    <published>2020-08-20T17:01:40.000Z</published>
-    <updated>2020-08-23T20:51:42.000Z</updated>
+    <title>无题</title>
+    <link href="http://hehelab.com/2020/empty/"/>
+    <id>http://hehelab.com/2020/empty/</id>
+    <published>2020-05-28T01:09:06.000Z</published>
+    <updated>2020-09-13T17:22:11.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>匆匆岁月，回忆的速度都跟不上，总以为自己还是个少年，还可以为了梦想去做些什么。</p><p><img src="http://lab.boke.run/usr/uploads/2020/05/1377700130.jpg" alt="HEHELab"></p>]]></content>
     
     
+      
+      
+    <summary type="html">&lt;p&gt;匆匆岁月，回忆的速度都跟不上，总以为自己还是个少年，还可以为了梦想去做些什么。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://lab.boke.run/usr/uploads/2020/05/1377700130.jpg&quot; alt=&quot;HEHELab&quot;&gt;&lt;/p&gt;
+</summary>
+      
     
     
-    <category term="Lab" scheme="http://hehelab.com/cat/lab/"/>
     
     
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://hehelab.com/2020/hello-world/"/>
-    <id>http://hehelab.com/2020/hello-world/</id>
-    <published>2020-08-09T10:41:24.000Z</published>
-    <updated>2020-08-09T10:41:24.000Z</updated>
+    <title>相遇和离别</title>
+    <link href="http://hehelab.com/2020/Met-With-The-Parting/"/>
+    <id>http://hehelab.com/2020/Met-With-The-Parting/</id>
+    <published>2020-05-04T01:09:06.000Z</published>
+    <updated>2020-09-14T20:30:38.000Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>台下人走过不记旧颜色</p><p>台上人唱着心碎离别歌</p><p>—</p><p>带故人夜游越城，古城依然是古城，而我们已不再是那时的我们。</p><p>遇见和别离，往后岁月，只愿一切安好，一帆风顺。</p><p><img src="http://lab.boke.run/usr/uploads/2020/05/04_001104_1.jpg" alt="戏台"></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+    <summary type="html">&lt;p&gt;台下人走过不记旧颜色&lt;/p&gt;
+&lt;p&gt;台上人唱着心碎离别歌&lt;/p&gt;
+&lt;p&gt;—&lt;/p&gt;
+&lt;p&gt;带故人夜游越城，古城依然是古城，而我们已不再是那时的我们。&lt;/p&gt;
+&lt;p&gt;遇见和别离，往后岁月，只愿一切安好，一帆风顺。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://lab.bok</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>被遗忘的春天</title>
+    <link href="http://hehelab.com/2020/Forgotten-Spring-2020/"/>
+    <id>http://hehelab.com/2020/Forgotten-Spring-2020/</id>
+    <published>2020-04-21T01:09:06.000Z</published>
+    <updated>2020-09-13T21:37:57.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>因为疫情的原因，都没仔细留心看，发现春去夏至，<br>院子里的绣球已钻出花苞，蔷薇已开艳好些，琵琶也开始变黄，红枫颜色正当时。</p><p><img src="http://lab.boke.run/usr/uploads/2020/04/21_004922_1.jpg" alt="被遗忘的春天"></p><p><img src="http://lab.boke.run/usr/uploads/2020/04/21_004922_2.jpg" alt="被遗忘的春天"></p><p><img src="http://lab.boke.run/usr/uploads/2020/04/21_004922_3.jpg" alt="被遗忘的春天"></p><p><img src="http://lab.boke.run/usr/uploads/2020/04/21_004922_4.jpg" alt="被遗忘的春天"></p><p><img src="http://lab.boke.run/usr/uploads/2020/04/21_004922_5.jpg" alt="被遗忘的春天"></p><p><img src="http://lab.boke.run/usr/uploads/2020/04/21_004922_6.jpg" alt="被遗忘的春天"></p><p><img src="http://lab.boke.run/usr/uploads/2020/04/21_004922_7.jpg" alt="被遗忘的春天"></p><p><img src="http://lab.boke.run/usr/uploads/2020/04/21_004922_8.jpg" alt="被遗忘的春天"></p><p><img src="http://lab.boke.run/usr/uploads/2020/04/21_004922_9.jpg" alt="被遗忘的春天"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;因为疫情的原因，都没仔细留心看，发现春去夏至，&lt;br&gt;院子里的绣球已钻出花苞，蔷薇已开艳好些，琵琶也开始变黄，红枫颜色正当时。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://lab.boke.run/usr/uploads/2020/04/21_004922_1.jpg&quot;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World!</title>
+    <link href="http://hehelab.com/2020/Hello-World/"/>
+    <id>http://hehelab.com/2020/Hello-World/</id>
+    <published>2020-03-01T01:09:06.000Z</published>
+    <updated>2020-09-13T17:22:35.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>第N次Hello World!<br>几年前因为各种忙碌，忘记续费，导致数据被清以后，也彻底放弃了折腾。<br>重新这篇Hello World!也许是依然有些不舍吧。</p><p><img src="http://lab.boke.run/usr/uploads/2020/05/2812543488.jpg" alt="Hello World!" title="Hello World!"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;第N次Hello World!&lt;br&gt;几年前因为各种忙碌，忘记续费，导致数据被清以后，也彻底放弃了折腾。&lt;br&gt;重新这篇Hello World!也许是依然有些不舍吧。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://lab.boke.run/usr/uploads/2020</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>菲律宾之旅-2019</title>
+    <link href="http://hehelab.com/2019/Philippines-Travel-2019/"/>
+    <id>http://hehelab.com/2019/Philippines-Travel-2019/</id>
+    <published>2019-08-31T01:09:06.000Z</published>
+    <updated>2020-09-13T17:19:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>整理中….</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;整理中….&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>青海甘肃大环线</title>
+    <link href="http://hehelab.com/2018/Qinghai-Gansu-Great-Circle-Line-Travel/"/>
+    <id>http://hehelab.com/2018/Qinghai-Gansu-Great-Circle-Line-Travel/</id>
+    <published>2018-09-27T01:09:06.000Z</published>
+    <updated>2020-09-13T17:19:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>整理中….</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;整理中….&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>东极岛之行</title>
+    <link href="http://hehelab.com/2016/Dongji-Island-Trip/"/>
+    <id>http://hehelab.com/2016/Dongji-Island-Trip/</id>
+    <published>2016-07-20T01:09:06.000Z</published>
+    <updated>2020-09-13T17:19:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>整理中….</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;整理中….&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>菲律宾之旅</title>
+    <link href="http://hehelab.com/2016/Philippines-Travel/"/>
+    <id>http://hehelab.com/2016/Philippines-Travel/</id>
+    <published>2016-01-23T01:09:06.000Z</published>
+    <updated>2020-09-13T17:19:30.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>整理中….</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;整理中….&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>泰国之旅</title>
+    <link href="http://hehelab.com/2016/Thailand-Travel/"/>
+    <id>http://hehelab.com/2016/Thailand-Travel/</id>
+    <published>2016-01-23T01:09:06.000Z</published>
+    <updated>2020-09-13T17:19:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>整理中….</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;整理中….&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>厦门之行</title>
+    <link href="http://hehelab.com/2014/Xiamen-%20Trip/"/>
+    <id>http://hehelab.com/2014/Xiamen-%20Trip/</id>
+    <published>2014-04-15T01:09:06.000Z</published>
+    <updated>2020-09-13T17:19:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>整理中….</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;整理中….&lt;/p&gt;
+</summary>
       
     
     
