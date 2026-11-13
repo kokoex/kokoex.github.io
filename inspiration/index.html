@@ -20,11 +20,11 @@
   <div class="wrap">
     <a class="brand" href="/">晚安 Blog</a>
     <div class="subtitle">深夜写字，白天生活</div>
-    <nav class="site-nav"><a href="/">首页</a><a href="/gallery/">相册</a><a href="/inspiration/" class="active">灵感</a><a href="/moments/">说说</a><a href="/diary/">深夜鸡汤</a><a href="/shop/">好物</a><a href="/categories/">分类</a><a href="/tags/">标签</a><a href="/archives/">归档</a><a href="/pages/about/">关于</a><a href="/pages/archives/">归档</a></nav>
+    <nav class="site-nav"><a href="/">首页</a><a href="/gallery/">相册</a><a href="/inspiration/" class="active">灵感</a><a href="/moments/">说说</a><a href="/diary/">深夜鸡汤</a><a href="/shop/">好物</a><a href="/archives/">归档</a><a href="/pages/about/">关于</a></nav>
   </div>
 </header>
 <main class="wrap"><div class="page-head"><h1 class="page-title">灵感</h1><p class="page-desc">一些来不及写成文章的句子、摘抄与念头。</p></div>
-<div class="insp-masonry">
+<div class="insp-masonry lazy-root" data-batch="8">
   <article class="insp-card">
     <div class="insp-quote">“</div>
     <div class="insp-text">「声音」在五年前和五年后，会不会是两句不同的话？</div>
@@ -200,7 +200,7 @@
       <span class="insp-source">— 设计随想</span>
       <span class="insp-tags"><em>#设计</em><em>#技术</em></span>
     </div>
-  </article></div></main>
+  </article></div><script>(function(){var r=document.currentScript&&document.currentScript.previousElementSibling;if(!r||!r.classList||!r.classList.contains('lazy-root'))return;var b=parseInt(r.getAttribute('data-batch')||'8',10)||8;var s='IntersectionObserver'in window;var kids=[].slice.call(r.children).filter(function(x){return!x.classList.contains('lazy-skip');});if(kids.length<=b)return;kids.slice(b).forEach(function(x){x.hidden=true;});var sentinel=document.createElement('div');sentinel.className='lazy-sentinel lazy-skip';r.parentNode.insertBefore(sentinel,r.nextSibling);var more=document.createElement('button');more.type='button';more.className='lazy-more lazy-skip';more.textContent='加载更多';r.parentNode.insertBefore(more,sentinel.nextSibling);var ob=null;function reveal(){var h=kids.filter(function(x){return x.hidden;});h.slice(0,b).forEach(function(x){x.hidden=false;});if(!kids.some(function(x){return x.hidden;})){if(ob)ob.disconnect();sentinel.style.display='none';more.style.display='none';}}more.addEventListener('click',reveal);if(s){ob=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)reveal();});},{rootMargin:'400px'});ob.observe(sentinel);}else{kids.forEach(function(x){x.hidden=false;});sentinel.style.display='none';more.style.display='none';}})();</script></main>
 <footer class="site-foot">
   <div>慢慢写，慢慢生活。</div>
   <div>© 2026 晚安 · Powered by 晚安 Blog</div>

@@ -546,3 +546,9 @@ img,video,iframe,table,pre{max-width:100%}
   [data-theme] .product:hover,[data-theme] .insp-card:hover{transform:none}
 }
 @media print{.site-nav,.pager,.comments,.site-foot{display:none}}
+
+/* —— 边浏览边加载（滚动懒加载）：默认隐藏溢出项，JS 揭示；无 JS 时全部显示 —— */
+[hidden]{display:none!important}
+.lazy-sentinel{height:1px;margin:0;padding:0;opacity:0;pointer-events:none}
+.lazy-more{display:block;margin:28px auto 4px;padding:9px 26px;border:1px solid var(--line);border-radius:99px;background:var(--surface);color:var(--accent);font-size:13px;font-family:var(--sans);cursor:pointer;transition:background .2s,color .2s}
+.lazy-more:hover{background:var(--accent);color:var(--bg);border-color:var(--accent)}
