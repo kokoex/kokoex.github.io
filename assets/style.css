@@ -64,14 +64,32 @@ a{color:inherit;text-decoration:none;transition:color .2s}
 a:hover{color:var(--accent)}
 img{max-width:100%;height:auto;display:block}
 .wrap{max-width:760px;margin:0 auto;padding:0 24px}
-.site-head{border-bottom:1px solid var(--line);padding:34px 0 22px;margin-bottom:44px}
-.brand{font-family:var(--serif);font-size:27px;font-weight:700;letter-spacing:-.02em;line-height:1.2}
+.site-head{position:sticky;top:0;z-index:30;background:color-mix(in srgb, var(--bg) 82%, transparent);backdrop-filter:saturate(180%) blur(10px);-webkit-backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--line);padding:18px 0 14px;margin-bottom:36px}
+.brand{display:inline-flex;align-items:center;gap:10px;font-family:var(--serif);font-size:27px;font-weight:700;letter-spacing:-.02em;line-height:1.2}
 .brand:hover{color:var(--fg)}
+.brand-logo{height:34px;width:auto;border-radius:8px;display:block}
+.brand-text{font:inherit}
 .subtitle{color:var(--muted);font-size:13px;margin-top:5px;letter-spacing:.02em}
 .site-nav{display:flex;gap:26px;flex-wrap:wrap;margin-top:20px;font-size:14px}
-.site-nav a{color:var(--muted);position:relative}
+.site-nav a{color:var(--muted);position:relative;font-weight:600}
 .site-nav a.active,.site-nav a:hover{color:var(--accent)}
 .site-nav a.active:after{content:"";position:absolute;left:0;right:0;bottom:-7px;height:2px;background:var(--accent);border-radius:2px}
+/* —— 页眉布局与对齐：data-header=inline 时品牌与导航同一行；data-brand / data-nav 控制左右中 —— */
+.site-head .wrap{display:flex;flex-direction:column}
+.site-head .brand{align-self:flex-start}
+.site-head .site-nav{align-self:flex-start}
+html[data-brand="center"] .brand{align-self:center}
+html[data-brand="right"] .brand{align-self:flex-end}
+html[data-nav="center"] .site-nav{align-self:center}
+html[data-nav="right"] .site-nav{align-self:flex-end}
+html[data-header="inline"] .site-head .wrap{flex-direction:row;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px 24px}
+html[data-header="inline"] .site-head .subtitle{width:100%;margin-top:4px}
+html[data-header="inline"] .site-head .site-nav{margin-top:0}
+html[data-header="inline"][data-brand="center"] .site-head .brand{margin-left:auto;margin-right:auto}
+html[data-header="inline"][data-brand="left"] .site-head .brand{margin-right:auto}
+html[data-header="inline"][data-brand="right"] .site-head .brand{margin-left:auto}
+html[data-header="inline"][data-nav="center"] .site-head .site-nav{margin-left:auto;margin-right:auto}
+html[data-header="inline"][data-nav="right"] .site-head .site-nav{margin-left:auto}
 .page-head{margin-bottom:38px}
 .page-title{font-family:var(--serif);font-size:30px;line-height:1.3;margin:0 0 8px;letter-spacing:-.02em}
 .page-desc{color:var(--muted);font-size:14px;margin:0}
@@ -134,7 +152,15 @@ img{max-width:100%;height:auto;display:block}
 .comments{margin-top:50px;padding-top:26px;border-top:1px solid var(--line)}
 .comments h3{font-family:var(--serif);font-size:18px;margin:0 0 12px}
 .comment-hint{color:var(--muted);font-size:13px}
-.site-foot{border-top:1px solid var(--line);margin-top:70px;padding:26px 0 40px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.site-foot{border-top:1px solid var(--line);margin-top:70px;padding:30px 0 44px;color:var(--muted);font-size:12px}
+.site-foot .wrap{display:flex;flex-direction:column;align-items:center;gap:20px}
+.site-footnav{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13px;padding-bottom:18px;width:100%}
+html[data-footnav="left"] .site-footnav{justify-content:flex-start}
+html[data-footnav="center"] .site-footnav{justify-content:center}
+html[data-footnav="right"] .site-footnav{justify-content:flex-end}
+.site-footnav a{color:var(--muted);transition:color .2s}
+.site-footnav a:hover,.site-footnav a.active{color:var(--accent)}
+.site-foot-cols{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;width:100%}
 .empty{padding:50px 0;text-align:center;color:var(--muted)}
 
 /* —— 素线 / line：发丝细线、字距、序号 —— */
@@ -286,7 +312,7 @@ img{max-width:100%;height:auto;display:block}
 /* —— 沉浸阅读 / reading：Newsletter 式窄栏、衬线、大留白 —— */
 [data-theme="reading"] .wrap{max-width:700px}
 [data-theme="reading"] body{font-family:var(--serif)}
-[data-theme="reading"] .site-head{border:0;text-align:center;padding:56px 0 26px;margin-bottom:52px}
+[data-theme="reading"] .site-head{border:0;text-align:center;padding:40px 0 22px;margin-bottom:48px}
 [data-theme="reading"] .brand{font-size:32px;font-weight:400;letter-spacing:.02em}
 [data-theme="reading"] .subtitle{font-family:var(--sans);font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin-top:10px}
 [data-theme="reading"] .site-nav{justify-content:center;gap:22px;margin-top:26px;padding-top:20px;border-top:1px solid var(--line);font-family:var(--sans);font-size:13px}
@@ -306,7 +332,8 @@ img{max-width:100%;height:auto;display:block}
 [data-theme="reading"] .article-body h2{font-size:25px;font-weight:400;border:0;text-align:center;margin:2.4em 0 1em}
 [data-theme="reading"] .article-body blockquote{font-size:19px;border-left:2px solid var(--accent);background:none;padding-left:22px}
 [data-theme="reading"] .tag-pill,[data-theme="reading"] .tag-cloud a{border-radius:0;font-family:var(--sans)}
-[data-theme="reading"] .site-foot{font-family:var(--sans);border:0;text-align:center;justify-content:center}
+[data-theme="reading"] .site-foot{font-family:var(--sans);border:0;text-align:center}
+[data-theme="reading"] .site-foot-cols{justify-content:center;gap:8px}
 
 /* —— 聚光 / spotlight：深色光晕 Hero + 玻璃卡片 —— */
 [data-theme="spotlight"] .wrap{max-width:980px}
@@ -439,6 +466,51 @@ img{max-width:100%;height:auto;display:block}
 [data-theme="timeline"] .diary-list{gap:14px}
 [data-theme="timeline"] .diary{border-left:3px solid var(--accent)}
 
+/* —— 模块多布局：相册 / 灵感 / 说说 / 深夜鸡汤 —— */
+/* 相册：瀑布流 / 列表（网格见 .photo-grid） */
+.photo-masonry{columns:3;column-gap:16px}
+.photo-masonry .photo{break-inside:avoid;margin:0 0 16px}
+.photo-rows{display:flex;flex-direction:column;gap:14px}
+.photo-rows .photo{display:flex;gap:16px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px;box-shadow:var(--shadow)}
+.photo-rows .photo-thumb{flex:none;width:140px;aspect-ratio:4/3}
+.photo-rows figcaption{padding:0}
+.photo-rows .photo:hover{transform:none}
+@media(max-width:900px){.photo-masonry{columns:2}}
+@media(max-width:600px){.photo-masonry{columns:1}.photo-rows .photo{flex-direction:column;align-items:stretch}.photo-rows .photo-thumb{width:100%}}
+
+/* 灵感：网格 / 列表（瀑布流见 .insp-masonry） */
+.insp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.insp-grid .insp-card{margin:0;display:flex;flex-direction:column}
+.insp-list{display:flex;flex-direction:column;gap:14px}
+.insp-list .insp-card{margin:0;display:flex;flex-direction:column}
+
+/* 说说：卡片 / 网格（时间线见 .moment-list） */
+.moment-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.moment-cards .moment{margin:0;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--surface);box-shadow:var(--shadow)}
+.moment-cards .moment-dot{display:none}
+.moment-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.moment-grid .moment{margin:0;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.moment-grid .moment-dot{display:none}
+
+/* 深夜鸡汤：时间线 / 卡片（列表见 .diary-list） */
+.diary-timeline{position:relative;padding-left:30px;display:flex;flex-direction:column;gap:16px}
+.diary-timeline:before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.diary-timeline .diary{position:relative;margin:0;box-shadow:var(--shadow)}
+.diary-timeline .diary:before{content:"";position:absolute;left:-29px;top:26px;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px var(--bg)}
+.diary-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.diary-cards .diary{margin:0}
+
+/* 好物详情页 */
+.product-detail{display:grid;grid-template-columns:minmax(0,1fr) 1fr;gap:30px;align-items:start;margin:26px 0 40px}
+.product-detail-img img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
+.product-detail-info{display:flex;flex-direction:column;gap:14px}
+.product-detail-info .product-price{font-size:24px;margin:0}
+.product-detail-info .product-name{margin:0}
+.product-desc-long{font-size:15px;line-height:1.85}
+.product-desc-long p{margin:0 0 1em}
+.product-detail .shop-link{align-self:flex-start}
+@media(max-width:768px){.product-detail{grid-template-columns:1fr;gap:18px}}
+
 /* ============================================================
    全主题统一响应式层
    放在最后，用 [data-theme] 前缀取得与主题规则相同/更高的特异性，
@@ -505,7 +577,8 @@ img,video,iframe,table,pre{max-width:100%}
   [data-theme] .moment-dot{left:-23px}
   [data-theme="timeline"] .insp-masonry{padding-left:20px}
   [data-theme="timeline"] .insp-card:before{left:-19px}
-  [data-theme] .site-foot{margin-top:44px;flex-direction:column;gap:6px}
+  [data-theme] .site-foot{margin-top:44px}
+  [data-theme] .site-foot-cols{flex-direction:column;align-items:center;gap:6px;text-align:center}
   [data-theme] .lightbox{padding:4vh 4vw}
   [data-theme] .lightbox-close{top:12px;right:16px;font-size:30px}
   [data-theme="spotlight"] .page-head,[data-theme="reading"] .page-head{padding:28px 20px;margin-bottom:28px}
