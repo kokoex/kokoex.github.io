@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-theme="minimal">
+<html lang="zh-CN" data-theme="noir" data-header="inline" data-brand="right" data-nav="left" data-footnav="center">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -18,22 +18,48 @@
 <body>
 <header class="site-head">
   <div class="wrap">
-    <a class="brand" href="/">晚安 Blog</a>
-    <div class="subtitle">深夜写字，白天生活</div>
-    <nav class="site-nav"><a href="/">首页</a><a href="/gallery/">相册</a><a href="/inspiration/">灵感</a><a href="/moments/">说说</a><a href="/diary/">深夜鸡汤</a><a href="/shop/">好物</a><a href="/archives/">归档</a><a href="/pages/about/">关于</a></nav>
+    <div class="head-brand"><a class="brand" href="/"><span class="brand-text">晚安 Blog</span></a><div class="subtitle">深夜写字，白天生活</div></div>
+    <nav class="site-nav"><a href="/">首页</a><a href="/diary/">深夜鸡汤</a><a href="/inspiration/">灵感</a><a href="/moments/">说说</a><a href="/gallery/">相册</a><a href="/shop/">好物</a></nav>
   </div>
 </header>
-<main class="wrap"><div class="page-head"><a class="back" href="/tags/"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg><span class="arrow-txt">←</span> 所有标签</a><h1 class="page-title">#效率</h1><p class="page-desc">1 篇文章</p></div>
+<main class="wrap"><div class="page-head"><h1 class="page-title">#效率</h1><p class="page-desc">1 篇文章</p></div>
 <div class="post-list"><article class="post-item">
   
   <div class="post-meta"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg><time datetime="2026-11-05T13:15:00.000Z">2026-11-05</time><span class="ic-dot">·</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h6l2 2h10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><a href="/categories/tech/">技术笔记</a><span class="ic-dot">·</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>1 分钟阅读</span></div>
   <h2 class="post-title" data-idx="01"><a href="/posts/build-a-static-site-generator/">用 200 行代码写一个静态站点生成器</a></h2>
-  <p class="post-excerpt">静态站点生成器（SSG）的本质，其实只有一句话： *把数据套进模板，写成一堆 HTML 文件。 # 核心流程 1. 读取文章、页面、分类、标签 2. 把 Markdown 渲染成 HTML 3. 套用模板，输出文件 4. 生成 R…</p>
-  <a class="read-more" href="/posts/build-a-static-site-generator/">阅读全文<span class="arrow-txt"> →</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+  <div class="post-body"><p>静态站点生成器（SSG）的本质，其实只有一句话：</p>
+<p><strong>把数据套进模板，写成一堆 HTML 文件。</strong></p>
+<h2>核心流程</h2>
+<ol>
+<li>读取文章、页面、分类、标签</li>
+<li>把 Markdown 渲染成 HTML</li>
+<li>套用模板，输出文件</li>
+<li>生成 RSS 与 sitemap</li>
+</ol>
+<p><code>(data + template) → files</code></p>
+<h2>目录结构</h2>
+<pre><code class="language-text">/index.html
+/posts/hello-world/index.html
+/categories/notes/index.html
+/feed.xml
+/sitemap.xml
+</code></pre>
+<p>没有了，真的就这么简单。复杂的是细节：分页、摘要、永久链接、相对路径……但这些都不需要框架。</p>
+<blockquote>
+<p>工具越简单，越容易长久地用下去。</p>
+</blockquote>
+<p>完整实现见本站后台「发布静态站点」。</p>
+</div>
+  <a class="read-more" href="/posts/build-a-static-site-generator/">打开原文<span class="arrow-txt"> →</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
 </article></div></main>
 <footer class="site-foot">
-  <div>慢慢写，慢慢生活。</div>
-  <div>© 2026 晚安 · Powered by 晚安 Blog</div>
+  <div class="wrap">
+    <nav class="site-footnav"><a href="/">首页</a><a href="/tags/" class="active">标签</a><a href="/archives/">归档</a><a href="/pages/about/">关于</a></nav>
+    <div class="site-foot-cols">
+      <div>慢慢写，慢慢生活。</div>
+      <div>© 2026 晚安</div>
+    </div>
+  </div>
 </footer>
 </body>
 </html>
