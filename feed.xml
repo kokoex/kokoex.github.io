@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"><channel>
 <title>晚安 Blog</title>
-<link>https://kokoex.github.io/gn.github.io/</link>
+<link>https://kokoex.github.io/</link>
 <description>一个关于代码、书籍与深夜念头的个人博客。</description>
 <language>zh-CN</language>
-<lastBuildDate>Fri, 13 Nov 2026 00:23:33 GMT</lastBuildDate>
+<lastBuildDate>Fri, 13 Nov 2026 00:38:57 GMT</lastBuildDate>
 <item>
 <title>写在深夜：一个关于重新开始的故事</title>
-<link>https://kokoex.github.io/gn.github.io/posts/a-story-about-restarting/</link>
-<guid isPermaLink="true">https://kokoex.github.io/gn.github.io/posts/a-story-about-restarting/</guid>
+<link>https://kokoex.github.io/posts/a-story-about-restarting/</link>
+<guid isPermaLink="true">https://kokoex.github.io/posts/a-story-about-restarting/</guid>
 <pubDate>Sun, 08 Nov 2026 15:40:00 GMT</pubDate>
 <description>有些夜晚，你突然想把一切归零。 不是因为失败，而是因为太熟悉了。熟悉到看得见明天的样子，熟悉到失去了惊喜。 生活需要一点留白，才能听见自己的声音。 所以我给自己做了这个小小的博客——一个可以慢慢写、慢慢改、不必讨好任何人的地方。 # 为什么是静态页面 打开快，没有数据库查询 安全，没有后台入口暴露在公网 便宜，随便一个对象存储都能托管 长久，十年前的 HTML 今天依然能打开 这大概就是我想要的：…</description>
 </item>
 <item>
 <title>用 200 行代码写一个静态站点生成器</title>
-<link>https://kokoex.github.io/gn.github.io/posts/build-a-static-site-generator/</link>
-<guid isPermaLink="true">https://kokoex.github.io/gn.github.io/posts/build-a-static-site-generator/</guid>
+<link>https://kokoex.github.io/posts/build-a-static-site-generator/</link>
+<guid isPermaLink="true">https://kokoex.github.io/posts/build-a-static-site-generator/</guid>
 <pubDate>Thu, 05 Nov 2026 13:15:00 GMT</pubDate>
 <description>静态站点生成器（SSG）的本质，其实只有一句话： *把数据套进模板，写成一堆 HTML 文件。 # 核心流程 1. 读取文章、页面、分类、标签 2. 把 Markdown 渲染成 HTML 3. 套用模板，输出文件 4. 生成 RSS 与 sitemap (data + template) → files # 目录结构 没有了，真的就这么简单。复杂的是细节：分页、摘要、永久链接、相对路径……但这些…</description>
 </item>
 <item>
 <title>最近在读：《掌控习惯》</title>
-<link>https://kokoex.github.io/gn.github.io/posts/reading-atomic-habits/</link>
-<guid isPermaLink="true">https://kokoex.github.io/gn.github.io/posts/reading-atomic-habits/</guid>
+<link>https://kokoex.github.io/posts/reading-atomic-habits/</link>
+<guid isPermaLink="true">https://kokoex.github.io/posts/reading-atomic-habits/</guid>
 <pubDate>Wed, 28 Oct 2026 14:05:00 GMT</pubDate>
 <description>你不会上升到目标的高度，你只会下降到系统的水平。 这句话击中了我。 # 三个摘抄 1. 让习惯显而易见 —— 把书放在枕头边，而不是书架上 2. 让习惯有吸引力 —— 把「要做的」和「想做的」绑在一起 3. 让习惯简单易行 —— 把两步缩小成两分钟 # 我的实践 每天写 200 字，不追求质量，只追求不断线。 坚持了 23 天。这大概就是复利的样子。 建议搭配 习惯追踪表 一起食用。</description>
 </item>
