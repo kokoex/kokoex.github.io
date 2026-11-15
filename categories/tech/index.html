@@ -6,7 +6,7 @@
 <title>分类：技术笔记 · 晚安 Blog</title>
 <meta name="description" content="代码、工具与折腾记录">
 <meta name="keywords" content="博客, 静态站点, 生活手记, 技术笔记">
-<meta name="author" content="晚安">
+<meta name="author" content="晚安好梦">
 <link rel="canonical" href="https://kokoex.github.io/categories/tech/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="分类：技术笔记 · 晚安 Blog">
@@ -25,12 +25,14 @@ document.addEventListener('DOMContentLoaded',function(){var b=document.getElemen
 if(c.mode==='auto')setInterval(function(){if(over())return;var m=night()?'dark':'light';if(h.dataset.mode!==m)apply(m,false)},60000);
 document.addEventListener('click',function(e){var t=e.target,b=t&&t.closest?t.closest('#wanan-theme-toggle'):null;if(!b)return;e.preventDefault();apply(h.dataset.mode==='dark'?'light':'dark',true)});
 })();</script>
+<script>(function(){if(window.parent!==window)return;document.addEventListener('keydown',function(e){var t=e.target;if(t&&(t.tagName==='INPUT'||t.tagName==='TEXTAREA'||t.isContentEditable))return;var k=e.key||'';if((k==='/'&&!e.metaKey&&!e.ctrlKey)||((e.metaKey||e.ctrlKey)&&k.toLowerCase()==='k')){e.preventDefault();location.assign('/search/')}})})();</script>
 </head>
 <body>
+<div class="reading-progress" id="wanan-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="wanan-progress-bar"></span></div>
 <header class="site-head">
   <div class="wrap">
     <div class="head-brand"><a class="brand" href="/"><span class="brand-text">晚安 Blog</span></a></div>
-    <nav class="site-nav"><a href="/">首页</a><a href="/diary/">深夜鸡汤</a><a href="/inspiration/">灵感</a><a href="/moments/">说说</a><a href="/gallery/">相册</a><a href="/shop/">好物</a></nav>
+    <nav class="site-nav"><a href="/">首页</a><a href="/diary/">深夜鸡汤</a><a href="/inspiration/">灵感</a><a href="/moments/">说说</a><a href="/gallery/">相册</a><a href="/shop/">好物</a><a href="/links/">友链</a><a href="/search/">搜索</a><a href="/about/">关于</a><a class="nav-search" href="/search/" title="全站搜索（快捷键 / 或 Ctrl/⌘ + K）" aria-label="全站搜索"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M16 16l4 4"/></svg><span>搜索</span></a></nav>
   </div>
 </header>
 <main class="wrap"><div class="page-head"><h1 class="page-title">技术笔记</h1><p class="page-desc">代码、工具与折腾记录</p></div>
@@ -49,7 +51,7 @@ document.addEventListener('click',function(e){var t=e.target,b=t&&t.closest?t.cl
 </ol>
 <p><code>(data + template) → files</code></p>
 <h2>目录结构</h2>
-<pre><code class="language-text">/index.html
+<pre class="code-block" data-lang="text"><code>/index.html
 /posts/hello-world/index.html
 /categories/notes/index.html
 /feed.xml
@@ -65,13 +67,16 @@ document.addEventListener('click',function(e){var t=e.target,b=t&&t.closest?t.cl
 </article></div></main>
 <footer class="site-foot">
   <div class="wrap">
-    <nav class="site-footnav"><a href="/">首页</a><a href="/tags/">标签</a><a href="/archives/">归档</a><a href="/pages/about/">关于</a></nav>
+    <nav class="site-footnav"><a href="/">首页</a><a href="/tags/">标签</a><a href="/archives/">归档</a><a href="/pages/about/">关于</a><a href="/links/">友链</a><a href="/search/">搜索</a><a href="/about/">关于</a></nav>
     <div class="site-foot-cols">
-      <div>慢慢写，慢慢生活。</div>
-      <div>© 2026 晚安</div>
+      <div>慢慢写，慢慢生活。 · <a href="/feed.xml">RSS 订阅</a> · <a href="mailto:kokoex@gmail.com">邮件联系</a></div>
+      <div>© 2026 晚安好梦</div>
     </div>
   </div>
 </footer>
 <button id="wanan-theme-toggle" class="theme-toggle" type="button" aria-label="切换深浅主题" title="切换深浅主题">☾</button>
+<script>(function(){var b=document.getElementById('wanan-progress-bar');if(!b)return;function u(){var h=document.documentElement,s=h.scrollHeight-h.clientHeight,y=h.scrollTop||document.body.scrollTop||0,p=s>0?Math.min(100,Math.max(0,y/s*100)):0;b.style.width=p.toFixed(1)+'%';if(b.parentNode)b.parentNode.setAttribute('aria-valuenow',String(Math.round(p)))}window.addEventListener('scroll',u,{passive:true});window.addEventListener('resize',u);u()})();</script>
+
+
 </body>
 </html>

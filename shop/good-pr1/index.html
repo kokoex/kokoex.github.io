@@ -6,7 +6,7 @@
 <title>机械键盘 · 87 键 · 晚安 Blog</title>
 <meta name="description" content="用了三年，手感依旧。茶轴，敲字很稳，转让给更需要的人。">
 <meta name="keywords" content="博客, 静态站点, 生活手记, 技术笔记">
-<meta name="author" content="晚安">
+<meta name="author" content="晚安好梦">
 <link rel="canonical" href="https://kokoex.github.io/shop/good-pr1/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="机械键盘 · 87 键 · 晚安 Blog">
@@ -25,25 +25,30 @@ document.addEventListener('DOMContentLoaded',function(){var b=document.getElemen
 if(c.mode==='auto')setInterval(function(){if(over())return;var m=night()?'dark':'light';if(h.dataset.mode!==m)apply(m,false)},60000);
 document.addEventListener('click',function(e){var t=e.target,b=t&&t.closest?t.closest('#wanan-theme-toggle'):null;if(!b)return;e.preventDefault();apply(h.dataset.mode==='dark'?'light':'dark',true)});
 })();</script>
+<script>(function(){if(window.parent!==window)return;document.addEventListener('keydown',function(e){var t=e.target;if(t&&(t.tagName==='INPUT'||t.tagName==='TEXTAREA'||t.isContentEditable))return;var k=e.key||'';if((k==='/'&&!e.metaKey&&!e.ctrlKey)||((e.metaKey||e.ctrlKey)&&k.toLowerCase()==='k')){e.preventDefault();location.assign('/search/')}})})();</script>
 </head>
 <body>
+<div class="reading-progress" id="wanan-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="wanan-progress-bar"></span></div>
 <header class="site-head">
   <div class="wrap">
     <div class="head-brand"><a class="brand" href="/"><span class="brand-text">晚安 Blog</span></a></div>
-    <nav class="site-nav"><a href="/">首页</a><a href="/diary/">深夜鸡汤</a><a href="/inspiration/">灵感</a><a href="/moments/">说说</a><a href="/gallery/">相册</a><a href="/shop/" class="active">好物</a></nav>
+    <nav class="site-nav"><a href="/">首页</a><a href="/diary/">深夜鸡汤</a><a href="/inspiration/">灵感</a><a href="/moments/">说说</a><a href="/gallery/">相册</a><a href="/shop/" class="active">好物</a><a href="/links/">友链</a><a href="/search/">搜索</a><a href="/about/">关于</a><a class="nav-search" href="/search/" title="全站搜索（快捷键 / 或 Ctrl/⌘ + K）" aria-label="全站搜索"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M16 16l4 4"/></svg><span>搜索</span></a></nav>
   </div>
 </header>
 <main class="wrap"><section class="product-detail"><div class="product-detail-img"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%235c3d2e%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23c49b78%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22url(%23g)%22%2F%3E%3Ccircle%20cx%3D%22640%22%20cy%3D%22150%22%20r%3D%2270%22%20fill%3D%22%23ffffff%22%20opacity%3D%220.16%22%2F%3E%3Cpath%20d%3D%22M0%20470%20Q200%20360%20400%20450%20T800%20420%20V600%20H0Z%22%20fill%3D%22%23000%22%20opacity%3D%220.12%22%2F%3E%3Cpath%20d%3D%22M0%20520%20Q260%20430%20520%20510%20T800%20490%20V600%20H0Z%22%20fill%3D%22%23000%22%20opacity%3D%220.10%22%2F%3E%3Ctext%20x%3D%2240%22%20y%3D%22560%22%20fill%3D%22%23ffffff%22%20opacity%3D%220.82%22%20font-family%3D%22sans-serif%22%20font-size%3D%2228%22%20letter-spacing%3D%223%22%3EKEYBOARD%3C%2Ftext%3E%3C%2Fsvg%3E" alt="机械键盘 · 87 键"></div><div class="product-detail-info"><h1 class="product-name">机械键盘 · 87 键</h1><span class="product-price">¥ 399</span><div class="product-desc-long"><p>用了三年，手感依旧。茶轴，敲字很稳，转让给更需要的人。</p>
 </div><a class="shop-link" href="mailto:hello@example.com">立即购买 →</a></div></section></main>
 <footer class="site-foot">
   <div class="wrap">
-    <nav class="site-footnav"><a href="/">首页</a><a href="/tags/">标签</a><a href="/archives/">归档</a><a href="/pages/about/">关于</a></nav>
+    <nav class="site-footnav"><a href="/">首页</a><a href="/tags/">标签</a><a href="/archives/">归档</a><a href="/pages/about/">关于</a><a href="/links/">友链</a><a href="/search/">搜索</a><a href="/about/">关于</a></nav>
     <div class="site-foot-cols">
-      <div>慢慢写，慢慢生活。</div>
-      <div>© 2026 晚安</div>
+      <div>慢慢写，慢慢生活。 · <a href="/feed.xml">RSS 订阅</a> · <a href="mailto:kokoex@gmail.com">邮件联系</a></div>
+      <div>© 2026 晚安好梦</div>
     </div>
   </div>
 </footer>
 <button id="wanan-theme-toggle" class="theme-toggle" type="button" aria-label="切换深浅主题" title="切换深浅主题">☾</button>
+<script>(function(){var b=document.getElementById('wanan-progress-bar');if(!b)return;function u(){var h=document.documentElement,s=h.scrollHeight-h.clientHeight,y=h.scrollTop||document.body.scrollTop||0,p=s>0?Math.min(100,Math.max(0,y/s*100)):0;b.style.width=p.toFixed(1)+'%';if(b.parentNode)b.parentNode.setAttribute('aria-valuenow',String(Math.round(p)))}window.addEventListener('scroll',u,{passive:true});window.addEventListener('resize',u);u()})();</script>
+
+
 </body>
 </html>
