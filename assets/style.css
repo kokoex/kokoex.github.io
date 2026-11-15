@@ -384,12 +384,27 @@ html[data-footnav="right"] .site-footnav{justify-content:flex-end}
 .photo figcaption{padding:9px 2px 0;font-size:13px;line-height:1.5}
 .photo figcaption span{display:block;color:var(--muted);font-size:11px;margin-top:2px}
 .lb-anchor{position:absolute;top:0}
+/* 图片按视口加载：占位撑住布局，进入视口后才淡入缩略图 */
+.photo-img{opacity:0;transition:opacity .28s}
+.photo-img.photo-loaded{opacity:1}
+.photo-thumb noscript img{width:100%;height:100%;object-fit:cover}
+.photo-thumb img[data-src]{background:var(--surface)}
+/* 单个灯箱实例：显示由 JS 控制，不使用 :target，避免 hash 变化把页面滚回顶部 */
+html.lb-lock{overflow:hidden}
 .lightbox{position:fixed;inset:0;z-index:50;background:rgba(10,10,12,.94);display:none;flex-direction:column;align-items:center;justify-content:center;padding:5vh 5vw;gap:16px}
-.lightbox:target{display:flex}
-.lightbox img{max-width:100%;max-height:78vh;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.5);object-fit:contain}
-.lightbox p{color:#e8e8ea;font-size:14px;margin:0}
-.lightbox-close{position:absolute;top:20px;right:28px;color:#fff;font-size:36px;line-height:1;opacity:.75}
-.lightbox-close:hover{opacity:1}
+.lightbox.open{display:flex}
+.lightbox img{max-width:100%;max-height:76vh;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.5);object-fit:contain;background:rgba(255,255,255,.03)}
+.lightbox img:not([src]){display:none}
+.lightbox img.is-loading{opacity:.45}
+.lightbox .lightbox-bar{display:flex;flex-direction:column;align-items:center;gap:5px;max-width:88vw;color:#e8e8ea;font-size:14px;text-align:center;margin:0}
+.lightbox .lightbox-count{font-family:var(--mono);font-size:11px;color:#a0a0aa}
+.lightbox-close,.lightbox-nav{border:0;background:transparent;color:#fff;cursor:pointer;line-height:1;opacity:.75;transition:opacity .2s}
+.lightbox-close:hover,.lightbox-nav:hover:not(:disabled){opacity:1}
+.lightbox-close{position:absolute;top:16px;right:24px;font-size:34px;padding:4px 10px}
+.lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);font-size:44px;padding:6px 16px;background:rgba(255,255,255,.07);border-radius:10px}
+.lightbox-prev{left:16px}
+.lightbox-next{right:16px}
+.lightbox-nav:disabled{opacity:.18;cursor:default}
 
 /* —— 灵感页：CSS 多列瀑布流，配色统一跟随主题（克制、不花哨） —— */
 .insp-masonry{columns:3;column-gap:18px}
