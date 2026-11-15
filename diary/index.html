@@ -25,25 +25,16 @@ document.addEventListener('DOMContentLoaded',function(){var b=document.getElemen
 if(c.mode==='auto')setInterval(function(){if(over())return;var m=night()?'dark':'light';if(h.dataset.mode!==m)apply(m,false)},60000);
 document.addEventListener('click',function(e){var t=e.target,b=t&&t.closest?t.closest('#wanan-theme-toggle'):null;if(!b)return;e.preventDefault();apply(h.dataset.mode==='dark'?'light':'dark',true)});
 })();</script>
-
 </head>
 <body>
-<div class="reading-progress" id="wanan-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="wanan-progress-bar"></span></div>
 <header class="site-head">
   <div class="wrap">
     <div class="head-brand"><a class="brand" href="/"><span class="brand-text">晚安 Blog</span></a></div>
     <nav class="site-nav"><a href="/">首页</a><a href="/diary/" class="active">深夜鸡汤</a><a href="/inspiration/">灵感</a><a href="/moments/">说说</a><a href="/gallery/">相册</a><a href="/shop/">好物</a></nav>
   </div>
 </header>
-<main class="wrap"><div class="page-head"><h1 class="page-title">深夜鸡汤</h1><p class="page-desc">共 10 篇 · 每晚一条，写给还没睡的人。</p></div>
-<div class="diary-list lazy-root" data-batch="8"><article class="diary"><div class="diary-side"><span class="diary-day">16</span><span class="diary-month">2026-11</span></div><div class="diary-main"><h2 class="diary-title">一天结束时 · 2026.11.16</h2><div class="diary-meta"><span class="diary-mood">晚安</span><time datetime="2026-11-16">2026-11-16</time></div><div class="diary-body"><p>夜里的时间很薄，适合放下一两件不必带进明天的事。</p>
-<p>冰箱在另一个房间轻轻响了一下，又不响了。</p>
-<blockquote>
-<p>别急着原谅谁，先把自己照顾好。</p>
-</blockquote>
-<p>给明天的自己留一点空白，别提前把力气用光。</p>
-<p>—— 晚安</p>
-</div></div></article><article class="diary"><div class="diary-side"><span class="diary-day">15</span><span class="diary-month">2026-11</span></div><div class="diary-main"><h2 class="diary-title">给明天的自己留点空白 · 2026.11.15</h2><div class="diary-meta"><span class="diary-mood">晚安</span><time datetime="2026-11-15">2026-11-15</time></div><div class="diary-body"><p>有些疲惫不是睡一觉能解决的，它只是需要一个不被催促的晚上。</p>
+<main class="wrap"><div class="page-head"><h1 class="page-title">深夜鸡汤</h1><p class="page-desc">共 9 篇 · 每晚一条，写给还没睡的人。</p></div>
+<div class="diary-list lazy-root" data-batch="8"><article class="diary"><div class="diary-side"><span class="diary-day">15</span><span class="diary-month">2026-11</span></div><div class="diary-main"><h2 class="diary-title">给明天的自己留点空白 · 2026.11.15</h2><div class="diary-meta"><span class="diary-mood">晚安</span><time datetime="2026-11-15">2026-11-15</time></div><div class="diary-body"><p>有些疲惫不是睡一觉能解决的，它只是需要一个不被催促的晚上。</p>
 <p>楼上有人的脚步声停了，整栋楼跟着一起安静下来。</p>
 <blockquote>
 <p>你不需要时刻证明自己值得被喜欢。</p>
@@ -101,16 +92,13 @@ document.addEventListener('click',function(e){var t=e.target,b=t&&t.closest?t.cl
 </div></div></article></div><script>(function(){var r=document.currentScript&&document.currentScript.previousElementSibling;if(!r||!r.classList||!r.classList.contains('lazy-root'))return;var b=parseInt(r.getAttribute('data-batch')||'8',10)||8;var s='IntersectionObserver'in window;var kids=[].slice.call(r.children).filter(function(x){return!x.classList.contains('lazy-skip');});if(kids.length<=b)return;kids.slice(b).forEach(function(x){x.hidden=true;});var sentinel=document.createElement('div');sentinel.className='lazy-sentinel lazy-skip';r.parentNode.insertBefore(sentinel,r.nextSibling);var more=document.createElement('button');more.type='button';more.className='lazy-more lazy-skip';more.textContent='加载更多';r.parentNode.insertBefore(more,sentinel.nextSibling);var ob=null;function reveal(){var h=kids.filter(function(x){return x.hidden;});h.slice(0,b).forEach(function(x){x.hidden=false;});if(!kids.some(function(x){return x.hidden;})){if(ob)ob.disconnect();sentinel.style.display='none';more.style.display='none';}}more.addEventListener('click',reveal);if(s){ob=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)reveal();});},{rootMargin:'400px'});ob.observe(sentinel);}else{kids.forEach(function(x){x.hidden=false;});sentinel.style.display='none';more.style.display='none';}})();</script></main>
 <footer class="site-foot">
   <div class="wrap">
-    <nav class="site-footnav"><a href="/">首页</a><a href="/tags/">标签</a><a href="/archives/">归档</a></nav>
+    <nav class="site-footnav"><a href="/">首页</a><a href="/tags/">标签</a><a href="/archives/">归档</a><a href="/pages/about/">关于</a></nav>
     <div class="site-foot-cols">
-      <div>慢慢写，慢慢生活。 · <a href="/feed.xml">RSS 订阅</a> · <a href="mailto:kokoex@gmail.com">邮件联系</a></div>
+      <div>慢慢写，慢慢生活。</div>
       <div>© 2026 晚安好梦</div>
     </div>
   </div>
 </footer>
 <button id="wanan-theme-toggle" class="theme-toggle" type="button" aria-label="切换深浅主题" title="切换深浅主题">☾</button>
-<script>(function(){var b=document.getElementById('wanan-progress-bar');if(!b)return;function u(){var h=document.documentElement,s=h.scrollHeight-h.clientHeight,y=h.scrollTop||document.body.scrollTop||0,p=s>0?Math.min(100,Math.max(0,y/s*100)):0;b.style.width=p.toFixed(1)+'%';if(b.parentNode)b.parentNode.setAttribute('aria-valuenow',String(Math.round(p)))}window.addEventListener('scroll',u,{passive:true});window.addEventListener('resize',u);u()})();</script>
-
-
 </body>
 </html>
