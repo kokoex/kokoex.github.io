@@ -462,10 +462,10 @@ html.lb-lock{overflow:hidden}
 .diary-side{flex:none;width:64px;text-align:center;border-right:1px solid var(--line);padding-right:18px}
 .diary-day{display:block;font-family:var(--serif);font-size:34px;font-weight:700;line-height:1;color:var(--accent)}
 .diary-month{display:block;font-family:var(--mono);font-size:10px;color:var(--muted);margin-top:6px;letter-spacing:.04em}
+.diary-mood{display:inline-block;margin-top:10px;padding:2px 8px;border-radius:20px;background:var(--accent-soft);color:var(--accent);font-size:10px;line-height:1.4;white-space:nowrap}
 .diary-main{min-width:0;flex:1}
-.diary-title{font-family:var(--serif);font-size:20px;line-height:1.4;margin:0 0 6px}
+.diary-title{font-family:var(--serif);font-size:20px;line-height:1.4;margin:0 0 12px}
 .diary-meta{display:flex;align-items:center;gap:10px;font-size:11px;color:var(--muted);margin-bottom:12px}
-.diary-mood{padding:2px 10px;border-radius:20px;background:var(--accent-soft);color:var(--accent)}
 .diary-body{font-size:15px;line-height:1.85}
 .diary-body h2,.diary-body h3{font-size:17px}
 .diary-body p:last-child{margin-bottom:0}
@@ -578,7 +578,11 @@ img,video,iframe,table,pre{max-width:100%}
   html[data-theme][data-header="inline"][data-nav="center"] .site-head .site-nav{justify-self:center}
   html[data-theme][data-header="inline"][data-brand="right"] .head-brand,
   html[data-theme][data-header="inline"][data-nav="right"] .site-head .site-nav{justify-self:end}
-  html[data-theme][data-header="inline"] .site-head .site-nav{margin-top:0}
+  /* inline 单列退化时，导航列必须允许收缩到视口宽度，否则 overflow-x:auto 失效、导航撑破视口导致变形/裁切。
+     占满整列（stretch）后靠 flex 的 justify-content 保留左/中/右对齐语义。 */
+  html[data-theme][data-header="inline"] .site-head .site-nav{margin-top:0;width:100%;min-width:0;justify-self:stretch;justify-content:flex-start}
+  html[data-theme][data-header="inline"][data-nav="center"] .site-head .site-nav{justify-self:stretch;justify-content:center}
+  html[data-theme][data-header="inline"][data-nav="right"] .site-head .site-nav{justify-self:stretch;justify-content:flex-end}
   [data-theme] .brand{font-size:22px}
   [data-theme] .page-title,[data-theme] .article-title{font-size:27px;line-height:1.35}
   [data-theme] .post-title{font-size:19px}
