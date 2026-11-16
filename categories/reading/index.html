@@ -26,6 +26,7 @@ if(c.mode==='auto')setInterval(function(){if(over())return;var m=night()?'dark':
 document.addEventListener('click',function(e){var t=e.target,b=t&&t.closest?t.closest('#wanan-theme-toggle'):null;if(!b)return;e.preventDefault();apply(h.dataset.mode==='dark'?'light':'dark',true)});
 })();</script>
 <script>(function(){if(window.parent!==window)return;document.addEventListener('keydown',function(e){var t=e.target;if(t&&(t.tagName==='INPUT'||t.tagName==='TEXTAREA'||t.isContentEditable))return;var k=e.key||'';if((k==='/'&&!e.metaKey&&!e.ctrlKey)||((e.metaKey||e.ctrlKey)&&k.toLowerCase()==='k')){e.preventDefault();location.assign('/search/')}})})();</script>
+
 </head>
 <body>
 <div class="reading-progress" id="wanan-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="wanan-progress-bar"></span></div>
@@ -59,7 +60,7 @@ document.addEventListener('click',function(e){var t=e.target,b=t&&t.closest?t.cl
 </article></div></main>
 <footer class="site-foot">
   <div class="wrap">
-    <nav class="site-footnav"><a href="/">首页</a><a href="/tags/">标签</a><a href="/archives/">归档</a><a href="/links/">友链</a><a href="/about/">关于</a><a href="/search/">搜索</a></nav>
+    <nav class="site-footnav"><a href="/">首页</a><a href="/guestbook/">留言</a><a href="/tags/">标签</a><a href="/archives/">归档</a><a href="/links/">友链</a><a href="/about/">关于</a><a href="/search/">搜索</a></nav>
     <div class="site-foot-cols">
       <div>慢慢写，慢慢生活。</div>
       <div>© 2026 晚安</div>
