@@ -84,22 +84,21 @@ html[data-brand="center"] .head-brand{align-self:center;align-items:center;text-
 html[data-brand="right"] .head-brand{align-self:flex-end;align-items:flex-end;text-align:right}
 html[data-nav="center"] .site-nav{align-self:center}
 html[data-nav="right"] .site-nav{align-self:flex-end}
-/* inline：导航条高度固定；标题绝对定位浮在右侧（top 对齐、z-index 更高），
-   即使比导航条高也只向下溢出、不参与流布局，因此不会撑高导航条 */
-html[data-header="inline"] .site-head{height:60px;padding:0;margin-bottom:36px;overflow:visible}
-html[data-header="inline"] .site-head .wrap{position:relative;height:100%;display:flex;flex-direction:row;align-items:center;justify-content:flex-start}
-/* 导航留在文档流内、垂直居中；重置各主题附加的 border/padding，锁定高度不随标题变化 */
-html[data-header="inline"] .site-head .site-nav{margin-top:0;padding-top:0;border-top:0;min-width:0;max-width:calc(100% - 260px);flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;align-self:center;justify-content:flex-start}
+/* inline：顶栏固定高度；左侧导航、右侧标题，二者等高且都垂直居中在同一固定高度内 */
+html[data-header="inline"] .site-head{height:68px;padding:0;margin-bottom:36px;overflow:visible}
+html[data-header="inline"] .site-head .wrap{height:100%;display:flex;flex-direction:row;align-items:stretch;justify-content:space-between;gap:20px}
+/* 导航与标题高度相同（都撑满固定顶栏）、内容垂直居中；DOM 顺序是标题在前，用 order 把导航放到左边 */
+html[data-header="inline"] .site-head .site-nav{order:1;height:100%;display:flex;align-items:center;margin-top:0;padding-top:0;border-top:0;min-width:0;flex:1 1 auto;max-width:calc(100% - 260px);flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;justify-content:flex-start}
 html[data-header="inline"] .site-head .site-nav::-webkit-scrollbar{display:none}
 html[data-header="inline"][data-nav="center"] .site-head .site-nav{justify-content:center}
 html[data-header="inline"][data-nav="right"] .site-head .site-nav{justify-content:flex-end}
 html[data-header="inline"] .site-nav a{flex:none;white-space:nowrap}
 html[data-header="inline"] .site-nav a.active:after{bottom:-7px}
-/* 标题（含副标题）脱离文档流，定位在顶栏右侧；z-index 高于导航背景，可向下溢出 */
-html[data-header="inline"] .head-brand{position:absolute;top:8px;right:24px;left:auto;z-index:2;max-width:240px;overflow-wrap:anywhere;align-items:flex-start;text-align:left}
-html[data-header="inline"][data-brand="center"] .head-brand{right:auto;left:50%;transform:translateX(-50%);align-items:center;text-align:center}
-html[data-header="inline"][data-brand="right"] .head-brand{right:24px;left:auto;align-items:flex-end;text-align:right}
-html[data-header="inline"][data-brand="left"] .head-brand{right:auto;left:24px;align-items:flex-start;text-align:left}
+/* 标题固定在右侧、与主标题同高居中，不再绝对定位溢出 */
+html[data-header="inline"] .head-brand{order:2;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;flex:0 0 auto;max-width:240px;overflow-wrap:anywhere;text-align:left}
+html[data-header="inline"][data-brand="center"] .head-brand{align-items:center;text-align:center}
+html[data-header="inline"][data-brand="right"] .head-brand{align-items:flex-end;text-align:right}
+html[data-header="inline"][data-brand="left"] .head-brand{align-items:flex-start;text-align:left}
 .page-head{margin-bottom:38px}
 .page-title{font-family:var(--serif);font-size:30px;line-height:1.3;margin:0 0 8px;letter-spacing:-.02em}
 .page-desc{color:var(--muted);font-size:14px;margin:0}
@@ -578,14 +577,11 @@ img,video,iframe,table,pre{max-width:100%}
   [data-theme] .wrap{padding-left:18px;padding-right:18px}
   [data-theme] .site-head{padding:16px 0 12px;margin-bottom:26px}
   [data-theme] .site-nav{gap:14px;margin-top:14px;font-size:13px}
-  /* 手机端 inline 沿用同一套模型：固定高度导航条 + 右侧绝对定位标题。
-     导航只占左半并可横向滚动，标题限宽在右半并缩小字号；二者水平不重叠，
-     标题不会压住导航导致点不到，也不改变固定高度。 */
+  /* 手机端 inline 沿用等高固定模型：导航与标题都在固定高度顶栏内垂直居中。
+     导航占左半可横向滚动，标题限宽在右半并缩小字号；二者水平不重叠、等高。 */
   html[data-header="inline"] .site-head{height:56px;margin-bottom:26px}
-  html[data-header="inline"] .site-head .site-nav{width:48%;max-width:48%}
-  html[data-header="inline"] .head-brand{top:6px;right:18px;max-width:40%}
-  html[data-header="inline"][data-brand="right"] .head-brand{right:18px}
-  html[data-header="inline"][data-brand="left"] .head-brand{left:18px}
+  html[data-header="inline"] .site-head .site-nav{max-width:58%}
+  html[data-header="inline"] .head-brand{max-width:40%}
   html[data-header="inline"] .brand{font-size:18px;line-height:1.25}
   html[data-header="inline"] .subtitle{font-size:11px;margin-top:3px}
   [data-theme] .brand{font-size:22px}
