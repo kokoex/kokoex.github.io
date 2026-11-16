@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://kokoex.github.io/</loc><lastmod>2026-11-13</lastmod></url>
+<url><loc>https://kokoex.github.io/</loc><lastmod>2026-11-16</lastmod></url>
 <url><loc>https://kokoex.github.io/posts/a-story-about-restarting/</loc><lastmod>2026-11-08</lastmod></url>
 <url><loc>https://kokoex.github.io/posts/build-a-static-site-generator/</loc><lastmod>2026-11-05</lastmod></url>
 <url><loc>https://kokoex.github.io/posts/reading-atomic-habits/</loc><lastmod>2026-10-28</lastmod></url>
-<url><loc>https://kokoex.github.io/pages/about/</loc><lastmod>2026-11-01</lastmod></url>
 <url><loc>https://kokoex.github.io/pages/archives/</loc><lastmod>2026-10-01</lastmod></url>
 <url><loc>https://kokoex.github.io/categories/life/</loc></url>
 <url><loc>https://kokoex.github.io/categories/tech/</loc></url>
@@ -20,4 +19,11 @@
 <url><loc>https://kokoex.github.io/moments/</loc></url>
 <url><loc>https://kokoex.github.io/diary/</loc></url>
 <url><loc>https://kokoex.github.io/shop/</loc></url>
+<url><loc>https://kokoex.github.io/shop/good-pr1/</loc></url>
+<url><loc>https://kokoex.github.io/shop/good-pr2/</loc></url>
+<url><loc>https://kokoex.github.io/shop/good-pr3/</loc></url>
+<url><loc>https://kokoex.github.io/search/</loc></url>
+<url><loc>https://kokoex.github.io/series/</loc></url>
+<url><loc>https://kokoex.github.io/links/</loc></url>
+<url><loc>https://kokoex.github.io/about/</loc></url>
 </urlset>
