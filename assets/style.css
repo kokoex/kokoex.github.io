@@ -85,17 +85,22 @@ html[data-brand="right"] .head-brand{align-self:flex-end;align-items:flex-end;te
 html[data-nav="center"] .site-nav{align-self:center}
 html[data-nav="right"] .site-nav{align-self:flex-end}
 /* inline：顶栏固定高度；左侧导航、右侧标题，二者等高且都垂直居中在同一固定高度内 */
-html[data-header="inline"] .site-head{height:68px;padding:0;margin-bottom:36px;overflow:visible}
+html[data-header="inline"] .site-head{height:78px;padding:0;margin-bottom:36px;overflow:visible}
 html[data-header="inline"] .site-head .wrap{height:100%;display:flex;flex-direction:row;align-items:stretch;justify-content:space-between;gap:20px}
-/* 导航与标题高度相同（都撑满固定顶栏）、内容垂直居中；DOM 顺序是标题在前，用 order 把导航放到左边 */
-html[data-header="inline"] .site-head .site-nav{order:1;height:100%;display:flex;align-items:center;margin-top:0;padding-top:0;border-top:0;min-width:0;flex:1 1 auto;max-width:calc(100% - 260px);flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;justify-content:flex-start}
+/* 导航与标题高度相同（都撑满固定顶栏）、内容垂直居中；DOM 顺序是标题在前，用 order 把导航放到左边。
+   字号全断点统一，不随屏幕缩小；导航占左侧、限宽后横向滚动，绝不被右侧标题遮挡。 */
+html[data-header="inline"] .site-head .site-nav{order:1;height:100%;display:flex;align-items:center;margin-top:0;padding-top:0;border-top:0;min-width:0;flex:1 1 auto;max-width:calc(100% - 240px);flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;justify-content:flex-start;font-size:14px}
 html[data-header="inline"] .site-head .site-nav::-webkit-scrollbar{display:none}
 html[data-header="inline"][data-nav="center"] .site-head .site-nav{justify-content:center}
 html[data-header="inline"][data-nav="right"] .site-head .site-nav{justify-content:flex-end}
-html[data-header="inline"] .site-nav a{flex:none;white-space:nowrap}
-html[data-header="inline"] .site-nav a.active:after{bottom:-7px}
-/* 标题固定在右侧、与主标题同高居中，不再绝对定位溢出 */
-html[data-header="inline"] .head-brand{order:2;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;flex:0 0 auto;max-width:240px;overflow-wrap:anywhere;text-align:left}
+html[data-header="inline"] .site-nav a{flex:none;white-space:nowrap;position:relative;padding-bottom:5px}
+/* 激活下划线改用元素盒内的 box-shadow，避免 overflow-x:auto 把 :after 伪元素裁切导致大屏消失 */
+html[data-header="inline"] .site-nav a.active:after{display:none}
+html[data-header="inline"] .site-nav a.active{box-shadow:inset 0 -2px 0 var(--accent)}
+/* 标题固定在右侧、垂直居中；字号全断点统一不缩小，背景透明（不遮挡左侧导航文字） */
+html[data-header="inline"] .head-brand{order:2;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;flex:0 0 auto;max-width:220px;overflow-wrap:anywhere;text-align:left;background:transparent}
+html[data-header="inline"] .head-brand .brand{font-size:27px;line-height:1.2}
+html[data-header="inline"] .head-brand .subtitle{font-size:13px;margin-top:5px}
 html[data-header="inline"][data-brand="center"] .head-brand{align-items:center;text-align:center}
 html[data-header="inline"][data-brand="right"] .head-brand{align-items:flex-end;text-align:right}
 html[data-header="inline"][data-brand="left"] .head-brand{align-items:flex-start;text-align:left}
@@ -466,7 +471,7 @@ html.lb-lock{overflow:hidden}
 .diary{display:flex;gap:22px;padding:22px 24px;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow)}
 .diary-side{flex:none;width:64px;text-align:center;border-right:1px solid var(--line);padding-right:18px}
 .diary-day{display:block;font-family:var(--serif);font-size:34px;font-weight:700;line-height:1;color:var(--accent)}
-.diary-month{display:block;font-family:var(--mono);font-size:10px;color:var(--muted);margin-top:6px;letter-spacing:.04em}
+.diary-month{display:block;font-family:var(--mono);font-size:10px;color:var(--muted);margin-top:6px;letter-spacing:.04em;white-space:nowrap}
 .diary-main{min-width:0;flex:1}
 /* 标题行：标题在左、心情标签在右；窄屏允许换行，标签掉到第二行不挤压标题 */
 .diary-head{display:flex;align-items:center;justify-content:space-between;gap:8px 14px;flex-wrap:wrap;margin-bottom:12px}
@@ -577,13 +582,12 @@ img,video,iframe,table,pre{max-width:100%}
   [data-theme] .wrap{padding-left:18px;padding-right:18px}
   [data-theme] .site-head{padding:16px 0 12px;margin-bottom:26px}
   [data-theme] .site-nav{gap:14px;margin-top:14px;font-size:13px}
-  /* 手机端 inline 沿用等高固定模型：导航与标题都在固定高度顶栏内垂直居中。
-     导航占左半可横向滚动，标题限宽在右半并缩小字号；二者水平不重叠、等高。 */
-  html[data-header="inline"] .site-head{height:56px;margin-bottom:26px}
-  html[data-header="inline"] .site-head .site-nav{max-width:58%}
-  html[data-header="inline"] .head-brand{max-width:40%}
-  html[data-header="inline"] .brand{font-size:18px;line-height:1.25}
-  html[data-header="inline"] .subtitle{font-size:11px;margin-top:3px}
+  /* 手机端 inline 沿用等高固定模型：字号与桌面保持一致（不缩小），导航左侧横向滚动、标题右侧透明不遮挡。 */
+  html[data-header="inline"] .site-head{height:66px;margin-bottom:26px}
+  html[data-header="inline"] .site-head .site-nav{max-width:calc(100% - 190px);font-size:14px}
+  html[data-header="inline"] .head-brand{max-width:180px}
+  html[data-header="inline"] .head-brand .brand{font-size:27px;line-height:1.2}
+  html[data-header="inline"] .head-brand .subtitle{font-size:13px;margin-top:5px}
   [data-theme] .brand{font-size:22px}
   [data-theme] .page-title,[data-theme] .article-title{font-size:27px;line-height:1.35}
   [data-theme] .post-title{font-size:19px}
@@ -617,6 +621,7 @@ img,video,iframe,table,pre{max-width:100%}
   [data-theme] .diary{gap:14px;padding:18px 16px}
   [data-theme] .diary-side{width:48px;padding-right:12px}
   [data-theme] .diary-day{font-size:26px}
+  [data-theme] .diary-month{font-size:9px;letter-spacing:0}
   [data-theme] .moment-list{padding-left:24px}
   [data-theme] .moment-dot{left:-23px}
   [data-theme="timeline"] .insp-masonry{padding-left:20px}
@@ -633,13 +638,12 @@ img,video,iframe,table,pre{max-width:100%}
 
 @media(max-width:480px){
   [data-theme] .wrap{padding-left:14px;padding-right:14px}
-  /* 小屏：导航条再收紧一档，标题进一步缩字并贴齐 14px 内容边距 */
-  html[data-header="inline"] .site-head{height:52px}
-  html[data-header="inline"] .head-brand{top:5px;right:14px;max-width:42%}
-  html[data-header="inline"][data-brand="right"] .head-brand{right:14px}
-  html[data-header="inline"][data-brand="left"] .head-brand{left:14px}
-  html[data-header="inline"] .brand{font-size:16px}
-  html[data-header="inline"] .subtitle{font-size:10px;margin-top:2px}
+  /* 小屏：导航条再收紧一档；字号仍与桌面一致，标题贴齐 14px 内容边距、透明不遮挡 */
+  html[data-header="inline"] .site-head{height:62px}
+  html[data-header="inline"] .site-head .site-nav{max-width:calc(100% - 172px);font-size:14px}
+  html[data-header="inline"] .head-brand{max-width:162px}
+  html[data-header="inline"] .head-brand .brand{font-size:27px;line-height:1.2}
+  html[data-header="inline"] .head-brand .subtitle{font-size:13px;margin-top:5px}
   [data-theme] .brand{font-size:20px}
   [data-theme] .page-title,[data-theme] .article-title{font-size:24px}
   [data-theme] .post-title{font-size:18px}
@@ -657,8 +661,9 @@ img,video,iframe,table,pre{max-width:100%}
   [data-theme="magazine"] .shop-grid{grid-template-columns:1fr}
   [data-theme] .photo-grid{gap:8px}
   [data-theme] .diary{padding:16px 12px}
-  [data-theme] .diary-side{width:42px;padding-right:9px}
+  [data-theme] .diary-side{width:44px;padding-right:8px}
   [data-theme] .diary-day{font-size:23px}
+  [data-theme] .diary-month{font-size:8px;letter-spacing:0}
   [data-theme] .pager{font-size:13px;gap:10px}
   [data-theme] .article-tags{gap:6px}
   [data-theme] .link-list li{gap:8px;font-size:13px}
