@@ -582,12 +582,14 @@ img,video,iframe,table,pre{max-width:100%}
   [data-theme] .wrap{padding-left:18px;padding-right:18px}
   [data-theme] .site-head{padding:16px 0 12px;margin-bottom:26px}
   [data-theme] .site-nav{gap:14px;margin-top:14px;font-size:13px}
-  /* 手机端 inline 沿用等高固定模型：字号与桌面保持一致（不缩小），导航左侧横向滚动、标题右侧透明不遮挡。 */
+  /* 手机端 inline：右侧标题/副标题缩小，左侧导航放宽并下移对齐；6+ 项无需滑动即可见，标题透明不遮挡 */
   html[data-header="inline"] .site-head{height:66px;margin-bottom:26px}
-  html[data-header="inline"] .site-head .site-nav{max-width:calc(100% - 190px);font-size:14px}
-  html[data-header="inline"] .head-brand{max-width:180px}
-  html[data-header="inline"] .head-brand .brand{font-size:27px;line-height:1.2}
-  html[data-header="inline"] .head-brand .subtitle{font-size:13px;margin-top:5px}
+  html[data-header="inline"] .site-head .wrap{gap:14px}
+  html[data-header="inline"] .site-head .site-nav{max-width:calc(100% - 113px);font-size:12px;gap:8px;align-items:flex-end;padding-bottom:8px}
+  html[data-header="inline"] .head-brand{max-width:99px;justify-content:flex-start;padding-top:10px}
+  html[data-header="inline"] .head-brand .brand{font-size:18px;line-height:1.2}
+  html[data-header="inline"] .head-brand .brand-logo{height:24px}
+  html[data-header="inline"] .head-brand .subtitle{font-size:10px;line-height:1.3;margin-top:3px}
   [data-theme] .brand{font-size:22px}
   [data-theme] .page-title,[data-theme] .article-title{font-size:27px;line-height:1.35}
   [data-theme] .post-title{font-size:19px}
@@ -638,12 +640,14 @@ img,video,iframe,table,pre{max-width:100%}
 
 @media(max-width:480px){
   [data-theme] .wrap{padding-left:14px;padding-right:14px}
-  /* 小屏：导航条再收紧一档；字号仍与桌面一致，标题贴齐 14px 内容边距、透明不遮挡 */
+  /* 小屏 inline：标题进一步缩小、导航占满剩余宽度；导航文字靠下、与右上标题错落，6 项无需滑动可见 */
   html[data-header="inline"] .site-head{height:62px}
-  html[data-header="inline"] .site-head .site-nav{max-width:calc(100% - 172px);font-size:14px}
-  html[data-header="inline"] .head-brand{max-width:162px}
-  html[data-header="inline"] .head-brand .brand{font-size:27px;line-height:1.2}
-  html[data-header="inline"] .head-brand .subtitle{font-size:13px;margin-top:5px}
+  html[data-header="inline"] .site-head .wrap{gap:8px}
+  html[data-header="inline"] .site-head .site-nav{max-width:calc(100% - 88px);font-size:12px;gap:7px;align-items:flex-end;padding-bottom:8px}
+  html[data-header="inline"] .head-brand{max-width:80px;justify-content:flex-start;padding-top:7px}
+  html[data-header="inline"] .head-brand .brand{font-size:16px;line-height:1.2}
+  html[data-header="inline"] .head-brand .brand-logo{height:22px}
+  html[data-header="inline"] .head-brand .subtitle{font-size:10px;line-height:1.3;margin-top:3px}
   [data-theme] .brand{font-size:20px}
   [data-theme] .page-title,[data-theme] .article-title{font-size:24px}
   [data-theme] .post-title{font-size:18px}
