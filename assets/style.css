@@ -1255,140 +1255,162 @@ html[data-theme="docker"] .theme-mode-switch button[aria-pressed="true"]{backgro
 }
 
 /* ==================================================================
- * 悬浮导航主题 floatnav · 全新模板
- * 玻璃胶囊导航条：位置 / 透明度 / 模糊度 / 字体色 / 阴影 / 圆角 / 边缘距离
- * 全部由生成器写入 var(--fn-*)，深浅两套变量由 data-mode 切换。
+ * 悬浮导航主题 floatnav · 留白 × 暗夜
+ * 内容区取「留白」：纯色画布、发丝细线、大呼吸空间，无渐变 / 无阴影 / 无上浮；
+ * 深色取「暗夜」夜读配色；悬浮玻璃导航条是页面唯一装饰元素，参数由 --fn-* 控制。
  * 四档响应式：≥1400 宽屏 / 1100–1399 标准 / 760–1099 平板 / <760 手机。
  * ================================================================== */
 html[data-theme="floatnav"]{
-  --bg:#F4F6FB;--surface:#FFFFFF;--fg:#141B2D;--muted:#5B6478;--line:#E3E8F2;
-  --accent:#6D5EF8;--accent-soft:rgba(109,94,248,.12);--shadow:0 18px 50px rgba(20,27,45,.10);
-  --sans:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
-  --mono:"DM Mono","SFMono-Regular",Consolas,monospace;--serif:var(--sans);
+  --bg:#FFFFFF;--surface:#FAFAFA;--fg:#1A1A1A;--muted:#8A8A8A;--line:#ECECEC;
+  --accent:#7C6BF5;--accent-soft:rgba(124,107,245,.08);--shadow:none;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  --mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+  --serif:Georgia,"Songti SC","Noto Serif SC",serif;
   /* 导航条可自定义默认值，生成器注入的设置会覆盖这里 */
-  --fn-bg:255,255,255;--fn-fg:#141B2D;--fn-opacity:.86;--fn-blur:18px;
-  --fn-shadow:0 12px 36px rgba(20,27,45,.16);--fn-radius:20px;
-  --fn-offset:18px;--fn-side:max(24px,calc((100vw - 1180px)/2))
+  --fn-bg:255,255,255;--fn-fg:#1A1A1A;--fn-opacity:.78;--fn-blur:14px;
+  --fn-shadow:0 6px 24px rgba(20,20,20,.07);--fn-radius:14px;
+  --fn-offset:16px;--fn-side:max(24px,calc((100vw - 1080px)/2))
 }
 html[data-theme="floatnav"][data-mode="dark"]{
-  --bg:#0C1120;--surface:#141B2D;--fg:#F8FAFC;--muted:#9AA6BE;--line:#2A3450;
-  --accent:#9B8FFF;--accent-soft:rgba(155,143,255,.16);--shadow:0 18px 50px rgba(0,0,0,.4);
-  --fn-bg:20,27,45;--fn-fg:#F8FAFC
+  --bg:#111318;--surface:#181B21;--fg:#E8E8EA;--muted:#8B8F99;--line:#2A2D35;
+  --accent:#8B9CF7;--accent-soft:rgba(139,156,247,.12);--shadow:none;
+  --fn-bg:24,27,33;--fn-fg:#E8E8EA
 }
 html[data-theme="floatnav"] body{
-  background:var(--bg);color:var(--fg);font-family:var(--sans);letter-spacing:-.01em;
-  padding-top:calc(var(--fn-offset) + 86px)
+  background:var(--bg);color:var(--fg);font-family:var(--sans);letter-spacing:0;line-height:1.8;
+  padding-top:calc(var(--fn-offset) + 80px)
 }
 html[data-theme="floatnav"][data-float-pos="bottom"] body{
-  padding-top:36px;padding-bottom:calc(var(--fn-offset) + 86px)
+  padding-top:56px;padding-bottom:calc(var(--fn-offset) + 80px)
 }
-/* 悬浮玻璃导航条 */
+/* 唯一的悬浮元素：玻璃胶囊导航条 */
 html[data-theme="floatnav"] .site-head{
   position:fixed;z-index:50;left:var(--fn-side);right:var(--fn-side);
   top:var(--fn-offset);bottom:auto;margin:0;width:auto;max-width:none;
-  border:1px solid rgba(255,255,255,.28);border-radius:var(--fn-radius);
+  border:1px solid rgba(128,128,128,.14);border-radius:var(--fn-radius);
   background:rgba(var(--fn-bg),var(--fn-opacity));
-  -webkit-backdrop-filter:blur(var(--fn-blur)) saturate(160%);
-  backdrop-filter:blur(var(--fn-blur)) saturate(160%);
-  box-shadow:var(--fn-shadow);padding:0;
+  -webkit-backdrop-filter:blur(var(--fn-blur)) saturate(140%);
+  backdrop-filter:blur(var(--fn-blur)) saturate(140%);
+  box-shadow:var(--fn-shadow);padding:0
 }
 html[data-theme="floatnav"][data-float-pos="bottom"] .site-head{
   top:auto;bottom:var(--fn-offset)
 }
 html[data-theme="floatnav"] .site-head .wrap,
 html[data-theme="floatnav"][data-header="inline"] .site-head .wrap{
-  max-width:none;padding:10px 16px;margin:0;display:flex;align-items:center;gap:18px;
-  min-height:60px
+  max-width:none;padding:9px 18px;margin:0;display:flex;align-items:center;gap:16px;min-height:54px
 }
-html[data-theme="floatnav"] .brand{font-size:17px;font-weight:800;letter-spacing:-.04em;color:var(--fg)}
+html[data-theme="floatnav"] .brand{font-size:15px;font-weight:600;letter-spacing:-.02em;color:var(--fg)}
 html[data-theme="floatnav"] .brand:before{
-  content:"";display:inline-block;width:20px;height:20px;margin-right:9px;border-radius:7px;
-  background:linear-gradient(135deg,#6D5EF8,#29B8F5);vertical-align:-4px;
-  box-shadow:0 4px 10px rgba(109,94,248,.35)
+  content:"";display:inline-block;width:8px;height:8px;margin-right:9px;border-radius:50%;
+  background:var(--fg);vertical-align:2px;opacity:.8
 }
 html[data-theme="floatnav"] .brand:hover{color:var(--accent)}
-html[data-theme="floatnav"] .subtitle{font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:2px}
-html[data-theme="floatnav"] .site-nav{margin-left:auto;display:flex;align-items:center;gap:2px;flex-wrap:nowrap}
+html[data-theme="floatnav"] .subtitle{font-size:10px;letter-spacing:.06em;color:var(--muted);margin-top:1px}
+html[data-theme="floatnav"] .site-nav{margin-left:auto;display:flex;align-items:center;gap:4px;flex-wrap:nowrap}
 html[data-theme="floatnav"] .site-nav a{
-  border-radius:999px;padding:9px 14px;font-size:12.5px;font-weight:600;color:var(--fn-fg);
-  opacity:.72;transition:background .2s,opacity .2s
+  border-radius:8px;padding:7px 12px;font-size:13px;font-weight:500;color:var(--fn-fg);
+  opacity:.6;transition:opacity .18s,color .18s
 }
 html[data-theme="floatnav"] .site-nav a:hover,
-html[data-theme="floatnav"] .site-nav a.active{opacity:1;background:var(--accent-soft);color:var(--accent)}
+html[data-theme="floatnav"] .site-nav a.active{opacity:1;color:var(--accent)}
 html[data-theme="floatnav"] .site-nav a.active:after{display:none}
 html[data-theme="floatnav"] .nav-search,html[data-theme="floatnav"] .search-pill{
-  border-radius:999px;background:var(--accent-soft);border:1px solid var(--line);color:var(--fg)
+  border-radius:999px;background:transparent;border:1px solid var(--line);color:var(--fg)
 }
 html[data-theme="floatnav"] .search-pill span:last-child,
 html[data-theme="floatnav"] .nav-search span{display:none}
 html[data-theme="floatnav"] .theme-mode-switch.head-theme{
-  border-color:var(--line);background:rgba(var(--fn-bg),.5)
+  border-color:rgba(128,128,128,.14);background:transparent
 }
-html[data-theme="floatnav"] main.wrap{max-width:1180px;padding:0 24px 72px}
-/* 首屏标题：大字号 + 渐变字，导航悬浮在上方 */
+/* 首屏：无卡片、无渐变，一条发丝线分隔，大量留白 */
+html[data-theme="floatnav"] main.wrap{max-width:1080px;padding:0 24px 120px}
 html[data-theme="floatnav"] .page-head,
 html[data-theme="floatnav"] .home-hero{
-  margin-top:18px;border:1px solid var(--line);border-radius:28px;
-  background:linear-gradient(135deg,rgba(109,94,248,.10),rgba(41,184,245,.06) 60%,transparent);
-  box-shadow:var(--shadow)
+  margin:28px 0 0;padding:56px 0 44px;border:0;border-bottom:1px solid var(--line);
+  border-radius:0;background:transparent;box-shadow:none
 }
 html[data-theme="floatnav"] .page-title,
 html[data-theme="floatnav"] .article-title,
 html[data-theme="floatnav"] .home-title{
-  font-family:var(--sans);font-weight:800;letter-spacing:-.055em;line-height:1.06
+  font-family:var(--sans);font-weight:600;letter-spacing:-.045em;line-height:1.14
 }
+/* 文章列表：发丝线分隔，去掉卡片阴影与上浮 */
 html[data-theme="floatnav"] .post-item{
-  border:1px solid var(--line);border-radius:20px;background:var(--surface);
-  padding:24px 26px;box-shadow:var(--shadow);transition:transform .22s,box-shadow .22s
+  border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;
+  padding:34px 0;box-shadow:none;transition:opacity .2s
 }
-html[data-theme="floatnav"] .post-item:hover{transform:translateY(-3px)}
-html[data-theme="floatnav"] .post-title{font-family:var(--sans);font-weight:800;letter-spacing:-.035em}
-html[data-theme="floatnav"] .post-meta{font-family:var(--mono);font-size:11px;letter-spacing:.04em;text-transform:uppercase}
+html[data-theme="floatnav"] .post-item:first-child{padding:8px 0 34px}
+html[data-theme="floatnav"] .post-item:hover{transform:none;opacity:.68}
+html[data-theme="floatnav"] .post-item>.post-cover{margin:0 0 20px;border-radius:8px;overflow:hidden}
+html[data-theme="floatnav"] .post-title{font-family:var(--sans);font-weight:600;letter-spacing:-.025em;line-height:1.32}
+html[data-theme="floatnav"] .post-meta{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--muted)}
+/* 标签与按钮：描边胶囊，克制 */
 html[data-theme="floatnav"] .tag-pill,
-html[data-theme="floatnav"] .tag-cloud a,
-html[data-theme="floatnav"] .read-more{border-radius:999px}
-html[data-theme="floatnav"] .read-more{background:var(--accent);color:#fff;padding:8px 18px;font-family:var(--mono);font-size:12px}
-html[data-theme="floatnav"] .article-body blockquote{border-left:3px solid var(--accent);border-radius:0 14px 14px 0;background:var(--accent-soft)}
+html[data-theme="floatnav"] .tag-cloud a{
+  border-radius:999px;background:transparent;border:1px solid var(--line);
+  color:var(--muted);padding:3px 11px;font-size:12px;font-weight:500
+}
+html[data-theme="floatnav"] .tag-pill:hover,
+html[data-theme="floatnav"] .tag-cloud a:hover{border-color:var(--accent);color:var(--accent)}
+html[data-theme="floatnav"] .read-more{
+  display:inline-block;border-radius:999px;background:transparent;border:1px solid var(--fg);
+  color:var(--fg);padding:7px 18px;font-family:var(--sans);font-size:12px;font-weight:500
+}
+html[data-theme="floatnav"] .read-more:hover{background:var(--fg);color:var(--bg);filter:none}
+/* 正文与页脚 */
+html[data-theme="floatnav"] .article-body{line-height:1.9}
+html[data-theme="floatnav"] .article-body h2{font-family:var(--sans);font-weight:600;letter-spacing:-.025em}
+html[data-theme="floatnav"] .article-body blockquote{
+  border-left:2px solid var(--fg);border-radius:0;background:transparent;padding-left:20px;color:var(--muted)
+}
 html[data-theme="floatnav"] .article-body code{font-family:var(--mono)}
-html[data-theme="floatnav"] .site-foot{border-top:1px solid var(--line);background:var(--surface);color:var(--muted)}
+html[data-theme="floatnav"] .site-foot{border-top:1px solid var(--line);background:transparent;color:var(--muted)}
 html[data-theme="floatnav"] .site-foot a{color:var(--muted)}
+html[data-theme="floatnav"] .site-foot a:hover{color:var(--fg)}
+/* 三态切换按钮 */
+html[data-theme="floatnav"] .theme-mode-switch button{
+  border-radius:7px;background:transparent;color:var(--muted);font-size:11px;padding:5px 9px
+}
+html[data-theme="floatnav"] .theme-mode-switch button[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent)}
 html[data-theme="floatnav"] .theme-mode-switch.theme-toggle{
-  background:rgba(var(--fn-bg),.9);border-color:var(--line);box-shadow:var(--fn-shadow)
+  background:rgba(var(--fn-bg),.86);border:1px solid rgba(128,128,128,.14);box-shadow:var(--fn-shadow)
 }
 /* 标准屏 1100–1399 */
 @media(max-width:1399px){
   html[data-theme="floatnav"]{--fn-side:28px}
-  html[data-theme="floatnav"] main.wrap{max-width:1060px;padding:0 28px 64px}
-  html[data-theme="floatnav"] .site-nav a{padding:8px 11px;font-size:12px}
+  html[data-theme="floatnav"] main.wrap{max-width:1000px;padding:0 28px 100px}
+  html[data-theme="floatnav"] .site-nav a{padding:6px 10px;font-size:12.5px}
 }
 /* 平板 760–1099 */
 @media(max-width:1099px){
   html[data-theme="floatnav"]{--fn-side:18px}
-  html[data-theme="floatnav"] .site-head .wrap{gap:10px;min-height:56px;padding:8px 12px}
+  html[data-theme="floatnav"] .site-head .wrap{gap:10px;min-height:50px;padding:8px 12px}
   html[data-theme="floatnav"] .subtitle{display:none}
-  html[data-theme="floatnav"] .site-nav a{padding:7px 9px;font-size:11.5px}
-  html[data-theme="floatnav"] main.wrap{padding:0 20px 56px}
-  html[data-theme="floatnav"] .page-head,html[data-theme="floatnav"] .home-hero{border-radius:22px;padding:32px 26px}
+  html[data-theme="floatnav"] .site-nav a{padding:6px 9px;font-size:12px}
+  html[data-theme="floatnav"] main.wrap{padding:0 20px 80px}
+  html[data-theme="floatnav"] .page-head,html[data-theme="floatnav"] .home-hero{padding:40px 0 32px}
 }
-/* 手机 <760：导航条收窄，链接可横向滑动，避免挤压 */
+/* 手机 <760：导航条收窄，链接横向滑动 */
 @media(max-width:759px){
   html[data-theme="floatnav"]{--fn-side:10px;--fn-offset:10px}
-  html[data-theme="floatnav"] body{padding-top:calc(var(--fn-offset) + 72px)}
-  html[data-theme="floatnav"][data-float-pos="bottom"] body{padding-top:24px;padding-bottom:calc(var(--fn-offset) + 72px)}
-  html[data-theme="floatnav"] .site-head .wrap{min-height:52px;padding:7px 10px;gap:8px}
-  html[data-theme="floatnav"] .brand{font-size:15px}
-  html[data-theme="floatnav"] .brand:before{width:17px;height:17px;border-radius:6px;margin-right:7px}
+  html[data-theme="floatnav"] body{padding-top:calc(var(--fn-offset) + 68px)}
+  html[data-theme="floatnav"][data-float-pos="bottom"] body{padding-top:32px;padding-bottom:calc(var(--fn-offset) + 68px)}
+  html[data-theme="floatnav"] .site-head .wrap{min-height:46px;padding:6px 10px;gap:8px}
+  html[data-theme="floatnav"] .brand{font-size:14px}
+  html[data-theme="floatnav"] .brand:before{width:7px;height:7px;margin-right:7px}
   html[data-theme="floatnav"] .site-nav{
     overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;
-    justify-content:flex-start;max-width:calc(100vw - 190px)
+    justify-content:flex-start;max-width:calc(100vw - 170px);gap:2px
   }
   html[data-theme="floatnav"] .site-nav::-webkit-scrollbar{display:none}
-  html[data-theme="floatnav"] .site-nav a{padding:7px 9px;font-size:11px;flex:none}
-  html[data-theme="floatnav"] .theme-mode-switch.head-theme button{padding:5px 6px;font-size:9px}
-  html[data-theme="floatnav"] main.wrap{padding:0 14px 48px}
-  html[data-theme="floatnav"] .page-head,html[data-theme="floatnav"] .home-hero{padding:26px 20px;border-radius:18px}
-  html[data-theme="floatnav"] .post-item{padding:20px;border-radius:16px}
-  html[data-theme="floatnav"] .post-item>.post-cover{margin:-20px -20px 14px;border-radius:16px 16px 0 0}
+  html[data-theme="floatnav"] .site-nav a{padding:6px 8px;font-size:11.5px;flex:none}
+  html[data-theme="floatnav"] .theme-mode-switch.head-theme button{padding:4px 6px;font-size:10px}
+  html[data-theme="floatnav"] main.wrap{padding:0 16px 64px}
+  html[data-theme="floatnav"] .page-head,html[data-theme="floatnav"] .home-hero{padding:32px 0 26px;margin-top:16px}
+  html[data-theme="floatnav"] .post-item{padding:26px 0}
+  html[data-theme="floatnav"] .post-item:first-child{padding:6px 0 26px}
+  html[data-theme="floatnav"] .post-item>.post-cover{margin:0 0 16px;border-radius:6px}
 }
 
 /* ===== 悬浮导航主题 · 自定义参数 ===== */
