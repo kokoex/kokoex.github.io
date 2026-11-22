@@ -65,61 +65,25 @@
   --bg:#0b0c12; --surface:#151724; --fg:#eef0f8; --muted:#9498ad; --line:#2a2e42;
   --accent:#a78bfa; --accent-soft:rgba(167,139,250,.14); --shadow:0 18px 46px rgba(0,0,0,.36);
 }
-/* —— Docker 品牌主题 · 参考 docker.com 视觉语言 ——
-   蓝紫渐变顶栏 + 无衬线超大标题 + 胶囊控件 + 等宽点缀 + 日/夜双色渐变。
-   品牌色取 2025 官版：Base #6172FF / Canvas #F5F2EE / Ether #101010。
-   切换深浅时 data-mode 改变，--head-* 随之切换到夜间蓝紫渐变。 */
+/* —— Docker 品牌主题 · 对齐 docker.com 2026 官网视觉 ——
+   白色画布 + Docker Blue #2496ED + 近黑文字 + 胶囊控件 + 轻量卡片。
+   明暗两套：浅色官网白底，深色官网蓝黑底；Hero 用极浅蓝渐变，页眉用磨砂玻璃。 */
 [data-theme="docker"]{
-  --bg:#F5F2EE; --surface:#FFFDFA; --fg:#101010; --muted:#677285; --line:#DDD4C9;
-  --accent:#6172FF; --accent-soft:rgba(97,114,255,.12); --shadow:0 10px 34px rgba(16,16,16,.09);
-  --sans:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
-  --mono:"DM Mono","SFMono-Regular",Consolas,"Liberation Mono",monospace;
-  --serif:"DM Sans",-apple-system,"PingFang SC",sans-serif;
-  --head-1:#6172FF; --head-2:#475BFF; --head-3:#2335C8;
-  --head-d1:#0214A5; --head-d2:#2335C8; --head-d3:#101010;
+  --bg:#FFFFFF; --surface:#F6F8FA; --fg:#0B1118; --muted:#5B6572; --line:#E5E7EB;
+  --accent:#2496ED; --accent-soft:rgba(36,150,237,.10); --shadow:0 8px 24px rgba(11,17,24,.08);
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;
+  --mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+  --serif:var(--sans);
+  --head-1:#EAF6FF; --head-2:#F7FAFC; --head-3:#FFFFFF;
+  --head-d1:#0B2A44; --head-d2:#101D2B; --head-d3:#0B1118;
 }
 [data-theme="docker"][data-mode="dark"]{
-  --bg:#101010; --surface:#1D1D1D; --fg:#FFFDFA; --muted:#8993A5; --line:#3345D6;
-  --accent:#8592FF; --accent-soft:rgba(132,146,255,.16); --shadow:0 12px 40px rgba(0,0,0,.45);
-  --head-1:#0214A5; --head-2:#2335C8; --head-3:#101010;
-  --head-d1:#010E76; --head-d2:#0214A5; --head-d3:#0A0A0A;
+  --bg:#0B1118; --surface:#121B24; --fg:#F5F7FA; --muted:#9AA7B4; --line:#22303D;
+  --accent:#38BDF8; --accent-soft:rgba(56,189,248,.16); --shadow:0 12px 32px rgba(0,0,0,.4);
+  --head-1:#0B2A44; --head-2:#101D2B; --head-3:#0B1118;
+  --head-d1:#06192B; --head-d2:#0B1118; --head-d3:#0B1118;
 }
-[data-theme="docker"] body{letter-spacing:-.01em}
-[data-theme="docker"] .site-head{
-  background:linear-gradient(128deg,var(--head-1),var(--head-2) 52%,var(--head-3));
-  border:0;border-radius:0 0 28px 28px;padding:38px 0 32px;margin-bottom:38px;color:#fff;
-  transition:background .45s ease;
-}
-[data-theme="docker"] .site-head .brand{font-family:var(--sans);font-size:34px;font-weight:800;letter-spacing:-.05em;color:#fff;line-height:1.1}
-[data-theme="docker"] .site-head .brand:hover{color:#D1E4FF}
-[data-theme="docker"] .site-head .subtitle{font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:rgba(255,255,255,.82);margin-top:8px}
-[data-theme="docker"] .site-nav a{color:rgba(255,255,255,.84);font-family:var(--sans);font-size:14px;font-weight:600}
-[data-theme="docker"] .site-nav a.active,[data-theme="docker"] .site-nav a:hover{color:#fff}
-[data-theme="docker"] .site-nav a.active:after{background:#fff}
-[data-theme="docker"] .nav-search,[data-theme="docker"] .head-theme{
-  border-radius:999px;background:rgba(255,255,255,.16);color:#fff;border:1px solid rgba(255,255,255,.28)
-}
-[data-theme="docker"] .search-pill,[data-theme="docker"] .search-pill input{
-  border-radius:999px;background:rgba(255,255,255,.16);color:#fff
-}
-[data-theme="docker"] .search-pill input::placeholder{color:rgba(255,255,255,.7)}
-[data-theme="docker"] .page-title,[data-theme="docker"] .article-title{font-family:var(--sans);font-weight:800;letter-spacing:-.05em;line-height:1.06}
-[data-theme="docker"] .post-title{font-family:var(--sans);font-weight:800;letter-spacing:-.035em}
-[data-theme="docker"] .post-meta{font-family:var(--mono);font-size:11px;letter-spacing:.04em;text-transform:uppercase}
-[data-theme="docker"] .tag-pill,[data-theme="docker"] .tag-cloud a{border-radius:999px;background:var(--accent-soft);color:var(--accent);padding:3px 12px;font-weight:600}
-[data-theme="docker"] .read-more{display:inline-block;border-radius:999px;background:var(--accent);color:#fff;padding:8px 18px;font-family:var(--mono);font-size:12px;letter-spacing:.02em}
-[data-theme="docker"] .read-more:hover{color:#fff;filter:brightness(1.08)}
-[data-theme="docker"] .post-item{
-  border:1px solid var(--line);border-radius:18px;padding:24px 26px;margin-bottom:18px;
-  background:var(--surface);box-shadow:var(--shadow);transition:transform .22s,box-shadow .22s
-}
-[data-theme="docker"] .post-item:first-child{padding:24px 26px}
-[data-theme="docker"] .post-item:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(97,114,255,.18)}
-[data-theme="docker"] .post-item>.post-cover{margin:-24px -26px 18px;border-radius:18px 18px 0 0;overflow:hidden}
-[data-theme="docker"] .article-body h2{font-family:var(--sans);font-weight:800;letter-spacing:-.035em}
-[data-theme="docker"] .article-body code,[data-theme="docker"] .post-meta{font-family:var(--mono)}
-[data-theme="docker"] .article-body blockquote{border-left:3px solid var(--accent);border-radius:0 12px 12px 0;background:var(--accent-soft)}
-[data-theme="docker"] .theme-toggle,[data-theme="docker"] #wanan-theme-toggle{background:var(--accent);color:#fff;border-radius:999px;border:0;box-shadow:var(--shadow)}
+[data-theme="docker"] body{letter-spacing:-.005em}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.8;-webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
@@ -1073,4 +1037,189 @@ html[data-page-title="hidden"] .page-article>.article-head{display:none}
   html[data-footer-set="columns"] .foot-grid{grid-template-columns:1fr;gap:12px}
   .foot-cols{flex-direction:column;gap:6px}
   html[data-post-layout="editorial"] .article-body{font-size:15.5px}
+}
+
+/* ==================== Docker 官网风格复刻 · v2.6 ====================
+   放在文件末尾，确保覆盖早期通用规则与新页眉套装规则。 */
+html[data-theme="docker"] body{background:var(--bg);color:var(--fg);letter-spacing:-.005em}
+html[data-theme="docker"] a:hover{color:var(--accent)}
+html[data-theme="docker"] main.wrap{max-width:1180px;padding:0 28px}
+
+/* 页眉：白 / 蓝黑磨砂玻璃，胶囊导航，左侧抽象容器标 */
+html[data-theme="docker"] .site-head,
+html[data-theme="docker"][data-header="inline"] .site-head{
+  position:sticky;top:0;z-index:40;height:auto!important;min-height:0!important;
+  padding:13px 0!important;margin-bottom:0!important;overflow:visible!important;
+  background:rgba(255,255,255,.88)!important;border:0;border-bottom:1px solid var(--line)!important;
+  border-radius:0!important;box-shadow:0 1px 0 rgba(11,17,24,.02);color:var(--fg)!important;
+  -webkit-backdrop-filter:saturate(180%) blur(16px);backdrop-filter:saturate(180%) blur(16px)
+}
+html[data-theme="docker"][data-mode="dark"] .site-head{background:rgba(11,17,24,.9)!important}
+html[data-theme="docker"] .site-head .wrap,
+html[data-theme="docker"][data-header="inline"] .site-head .wrap{
+  max-width:1180px;height:auto!important;min-height:50px;padding:0 28px;
+  display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:18px
+}
+html[data-theme="docker"] .head-brand,
+html[data-theme="docker"][data-header="inline"] .head-brand{
+  order:1;flex:0 0 auto;max-width:none;height:auto;align-items:flex-start;text-align:left;
+  justify-content:flex-start;background:transparent
+}
+html[data-theme="docker"] .brand{display:inline-flex;align-items:center;gap:10px;font-size:22px;font-weight:800;letter-spacing:-.04em;line-height:1.2;color:var(--fg)}
+html[data-theme="docker"] .brand:before{
+  content:"";width:26px;height:26px;flex:none;border-radius:7px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='5' width='11' height='9' rx='2' fill='%232496ED'/%3E%3Crect x='18' y='5' width='11' height='9' rx='2' fill='%232496ED'/%3E%3Crect x='3' y='18' width='11' height='9' rx='2' fill='%232496ED'/%3E%3Crect x='18' y='18' width='11' height='9' rx='2' fill='%232496ED'/%3E%3C/svg%3E");
+  background-size:contain;background-repeat:no-repeat
+}
+html[data-theme="docker"] .brand:has(.brand-logo):before{display:none}
+html[data-theme="docker"] .brand:hover{color:var(--accent)}
+html[data-theme="docker"] .subtitle{margin-top:2px;font-size:11px;color:var(--muted);white-space:nowrap;letter-spacing:.02em}
+html[data-theme="docker"] .site-nav,
+html[data-theme="docker"][data-header="inline"] .site-head .site-nav{
+  order:2;flex:1 1 auto;max-width:none;height:auto;margin-top:0;padding:0;border-top:0;
+  display:flex;flex-wrap:nowrap;gap:4px;align-items:center;justify-content:center;overflow-x:auto;
+  scrollbar-width:none;-webkit-overflow-scrolling:touch;font-size:13px
+}
+html[data-theme="docker"] .site-nav::-webkit-scrollbar{display:none}
+html[data-theme="docker"][data-nav="right"] .site-nav{justify-content:flex-end}
+html[data-theme="docker"][data-nav="left"] .site-nav{justify-content:flex-start}
+html[data-theme="docker"] .site-nav a,
+html[data-theme="docker"][data-header="inline"] .site-nav a{
+  flex:none;white-space:nowrap;padding:8px 14px;border-radius:999px;font-weight:600;
+  color:var(--muted);box-shadow:none
+}
+html[data-theme="docker"] .site-nav a.active,
+html[data-theme="docker"] .site-nav a:hover{background:var(--accent-soft);color:var(--accent)}
+html[data-theme="docker"] .site-nav a.active:after{display:none}
+html[data-theme="docker"] .nav-search,
+html[data-theme="docker"] .search-pill{
+  border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--muted);
+  padding:6px 12px;font-size:12px;white-space:nowrap
+}
+html[data-theme="docker"] .search-pill svg{width:15px;height:15px}
+html[data-theme="docker"] .search-pill .search-go{background:var(--accent);color:#fff}
+html[data-theme="docker"] .head-theme{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--fg)}
+html[data-theme="docker"] .head-theme:hover{background:var(--accent-soft);border-color:var(--accent)}
+
+/* Hero：极浅蓝渐变 + 细网格 + 大号无衬线标题 */
+html[data-theme="docker"] .page-head{
+  position:relative;overflow:hidden;max-width:1180px;margin:32px auto 30px;padding:52px 56px;
+  border:1px solid rgba(36,150,237,.14);border-radius:24px;
+  background:
+    linear-gradient(rgba(36,150,237,.045) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(36,150,237,.045) 1px,transparent 1px),
+    radial-gradient(circle at 88% 8%,rgba(36,150,237,.18),transparent 42%),
+    linear-gradient(135deg,#EAF6FF 0%,#F7FAFC 56%,#FFFFFF 100%);
+  background-size:26px 26px,26px 26px,auto,auto;
+  box-shadow:0 16px 40px rgba(36,150,237,.08)
+}
+html[data-theme="docker"][data-mode="dark"] .page-head{
+  border-color:#1D3B55;
+  background:
+    linear-gradient(rgba(56,189,248,.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(56,189,248,.05) 1px,transparent 1px),
+    radial-gradient(circle at 88% 8%,rgba(56,189,248,.16),transparent 44%),
+    linear-gradient(135deg,#0B2A44 0%,#101D2B 58%,#0B1118 100%);
+  background-size:26px 26px,26px 26px,auto,auto;
+  box-shadow:0 18px 48px rgba(0,0,0,.28)
+}
+html[data-theme="docker"] .page-head:before{
+  content:"BUILD · SHIP · RUN";display:block;margin-bottom:14px;
+  font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.18em;color:var(--accent)
+}
+html[data-theme="docker"] .page-title{
+  margin:0 0 12px;font-family:var(--sans);font-size:clamp(38px,5.6vw,64px);font-weight:800;
+  line-height:1.05;letter-spacing:-.045em;color:var(--fg)
+}
+html[data-theme="docker"] .page-desc{max-width:620px;font-size:16px;line-height:1.7;color:var(--muted)}
+
+/* 文章列表：官网风格的白底轻卡片 */
+html[data-theme="docker"] .post-list{max-width:980px;margin:0 auto;gap:18px}
+html[data-theme="docker"] .post-item{
+  border:1px solid var(--line);border-radius:16px;padding:26px 28px;margin:0;
+  background:var(--bg);box-shadow:var(--shadow);
+  transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease
+}
+html[data-theme="docker"] .post-item:hover{
+  transform:translateY(-2px);border-color:rgba(36,150,237,.45);
+  box-shadow:0 16px 36px rgba(36,150,237,.14)
+}
+html[data-theme="docker"] .post-item>.post-cover{margin:-26px -28px 18px;border-radius:16px 16px 0 0;overflow:hidden}
+html[data-theme="docker"] .post-title{font-family:var(--sans);font-size:24px;font-weight:800;letter-spacing:-.035em;line-height:1.3}
+html[data-theme="docker"] .post-meta{font-family:var(--mono);font-size:11px;letter-spacing:.04em;text-transform:uppercase}
+html[data-theme="docker"] .post-excerpt{font-size:14px;color:var(--muted)}
+html[data-theme="docker"] .tag-pill,
+html[data-theme="docker"] .tag-cloud a{border-radius:999px;background:var(--accent-soft);color:var(--accent);padding:3px 12px;font-weight:600}
+html[data-theme="docker"] .read-more{
+  display:inline-flex;align-items:center;border-radius:999px;background:var(--accent);color:#fff;
+  padding:9px 18px;font-size:13px;font-weight:700;letter-spacing:0
+}
+html[data-theme="docker"] .read-more:hover{color:#fff;filter:brightness(1.08)}
+html[data-theme="docker"] .home-mod-head{gap:12px;margin-bottom:16px}
+html[data-theme="docker"] .home-mod-title{font-size:22px;font-weight:800;letter-spacing:-.03em}
+html[data-theme="docker"] .home-mod-more{color:var(--accent);font-weight:700}
+
+/* 文章页：正文收窄，代码与引用 Docker 化 */
+html[data-theme="docker"] .article{max-width:760px;margin:0 auto}
+html[data-theme="docker"] .page-title,
+html[data-theme="docker"] .article-title{font-family:var(--sans);font-weight:800;letter-spacing:-.045em;line-height:1.08}
+html[data-theme="docker"] .article-title{font-size:clamp(34px,5vw,52px)}
+html[data-theme="docker"] .article-body h2{font-family:var(--sans);font-weight:800;letter-spacing:-.035em}
+html[data-theme="docker"] .article-body code,
+html[data-theme="docker"] .post-meta{font-family:var(--mono)}
+html[data-theme="docker"] .article-body code{background:var(--accent-soft);color:var(--accent);border-radius:6px}
+html[data-theme="docker"] .article-body pre{
+  background:#0B1118;color:#D6E9F8;border:1px solid #1D3B55;border-radius:14px;padding:20px 22px
+}
+html[data-theme="docker"] .article-body blockquote{
+  border-left:4px solid var(--accent);border-radius:0 12px 12px 0;
+  background:var(--accent-soft);color:var(--fg);font-style:normal
+}
+html[data-theme="docker"] .theme-toggle,
+html[data-theme="docker"] #wanan-theme-toggle{
+  width:42px;height:42px;border-radius:50%;background:var(--accent);color:#fff;border:0;
+  box-shadow:0 8px 20px rgba(36,150,237,.35)
+}
+
+/* 页脚：深色收尾 + Build / Ship / Run 字标 */
+html[data-theme="docker"] .site-foot{
+  margin-top:80px;padding:44px 0 36px;border-top:0;background:#0B1118;color:#9AA7B4;font-size:12px
+}
+html[data-theme="docker"] .site-foot .wrap{max-width:1180px;align-items:flex-start;gap:12px}
+html[data-theme="docker"] .site-foot .wrap:before{
+  content:"Build · Ship · Run";display:block;width:100%;margin-bottom:10px;
+  font-family:var(--sans);font-size:24px;font-weight:800;letter-spacing:-.04em;color:#F5F7FA
+}
+html[data-theme="docker"] .site-foot a,
+html[data-theme="docker"] .site-footnav a,
+html[data-theme="docker"] .site-footnav a.active,
+html[data-theme="docker"] .site-foot-cols,
+html[data-theme="docker"] .foot-pill{color:#9AA7B4}
+html[data-theme="docker"] .site-foot a:hover,
+html[data-theme="docker"] .site-footnav a:hover{color:#38BDF8}
+
+/* 中等宽度：压缩胶囊间距，保证全部导航项可见 */
+@media(max-width:1024px){
+  html[data-theme="docker"] .site-head .wrap,
+  html[data-theme="docker"][data-header="inline"] .site-head .wrap{gap:12px}
+  html[data-theme="docker"] .site-nav a{padding:7px 10px;font-size:12px}
+}
+
+/* 窄屏：保留胶囊导航，Hero 与卡片收进安全区 */
+@media(max-width:720px){
+  html[data-theme="docker"] main.wrap{padding:0 16px}
+  html[data-theme="docker"] .site-head .wrap,
+  html[data-theme="docker"][data-header="inline"] .site-head .wrap{padding:0 16px;gap:10px}
+  html[data-theme="docker"] .subtitle{display:none}
+  html[data-theme="docker"] .site-nav{justify-content:flex-end}
+  html[data-theme="docker"] .site-nav a{padding:7px 10px;font-size:12px}
+  html[data-theme="docker"] .page-head{margin:20px auto;padding:32px 24px;border-radius:20px}
+  html[data-theme="docker"] .page-title{font-size:clamp(32px,9vw,48px)}
+  html[data-theme="docker"] .post-item{padding:22px}
+  html[data-theme="docker"] .post-item>.post-cover{margin:-22px -22px 16px;border-radius:16px 16px 0 0}
+}
+@media(max-width:420px){
+  html[data-theme="docker"] .brand{font-size:19px}
+  html[data-theme="docker"] .brand:before{width:22px;height:22px}
+  html[data-theme="docker"] .site-nav a{padding:6px 8px;font-size:12px}
 }
